@@ -1,0 +1,107 @@
+{PE.DataSource id="cone" datasource="专区_内容页" itemId="@RequestInt_id" xslt="true" /}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="{@cone.CSSNews}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{@cone.title2} _ 游民星空 GamerSky.com</title>
+    <meta name="keywords" content="{@cone.keywords}" />
+    <meta name="description" content="{@cone.description}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <!--#include File="/autoinc/abinc/www/zq_head.htm"-->
+    <script>var wapUrl = "{PE.Label id="专区获取Wap跳转地址" index="{@cone.GameLib}" /}";var contentPageIndex=1; var gameLib = {@cone.GameLib};</script>
+    <script src="http://j.gamersky.com/g/mobileesp.js"></script>
+</head>
+<body>
+<script src="http://www.gamersky.com/autoinc/allsite/allsite_nav_js.htm"></script>
+
+<div class="center">
+    <div class="Top">
+        <div class="toppic">{PE.Label id="专区方案六_TOP图片模块" itemId="@RequestInt_id" /}</div>
+        <div class="topnav">
+            <div class="nav1">
+                <ul class="nav">
+                    {PE.Label id="新_专区方案六_顶部导航" itemId="@RequestInt_id" ZGameDir="{@cone.ZGameDir}"/}
+                </ul>
+                <div class="Search" id="search-form">
+                    <div class="radio">
+                        <div class="txt">搜百度</div>
+                        <div class="con">
+                            <a href="javascript:;">搜百度</a>
+                            <a href="javascript:;">搜本站</a>
+                        </div>
+                    </div>
+                    <div class="form block" data-action="http://soso.gamersky.com/cse/search?s=3068275339727451251">
+                        <input class="Sinput" type="text" name="q" value="输入搜索信息" onfocus="if(value=='输入搜索信息')value='';this.onblur=function(){if(value=='')value='输入搜索信息'}"/>
+                        <input class="Sbutton" type="button" value="搜百度"/>
+                    </div>
+                    <div class="form none" data-action="http://so.gamersky.com/">
+                        <input class="Sinput" type="text" name="s" value="输入搜索信息" onfocus="if(value=='输入搜索信息')value='';this.onblur=function(){if(value=='')value='输入搜索信息'}"/>
+                        <input class="Sbutton" type="button" value="搜本站"/>
+                    </div>
+                </div><!--Search end-->
+            </div><!--nav1 end-->
+            {PE.Label id="专区方案六_专区副导航" itemId="@RequestInt_id"/}
+        </div><!--topnav end-->
+    </div><!--Top end-->
+
+    <div class="Mid">
+        <div class="Mid_ad">
+            <!--#include File="/autoinc/abinc/ja/zq_top_970_1.htm"-->
+        </div>
+
+        <div class="Mid_L">
+            {PE.Label id="专区方案六_A广告模块" itemId="@RequestInt_id" /}
+            <div class="MidL1">
+                {PE.Label id="专区方案六_A八图新闻模块" itemId="@RequestInt_id"/}
+            </div><!--MidL1 end-->
+            <!--#include File="/autoinc/ja_nest/common/zq_600_new.htm"-->
+            <!--攻略合集-->
+            {@cone.bianjituijian}
+            <!--攻略合集 end-->
+            {PE.Label id="专区方案六_A攻略下载-更多" itemId="@RequestInt_id" ZGameDir="{@cone.ZGameDir}"/}
+            {PE.Label id="专区方案六_A专题MOD模块" itemId="@RequestInt_id" ZGameDir="{@cone.ZGameDir}"/}
+            {PE.Label id="专区方案六_A视频模块" itemId="@RequestInt_id"/}
+            {PE.Label id="专区方案六_A截图" itemId="@RequestInt_id"/}
+            {PE.Label id="专区方案六_A壁纸" itemId="@RequestInt_id"/}
+            {PE.Label id="专区方案六_A配置需求" itemId="@RequestInt_id"/}
+            {PE.Label id="专区方案六_A系列游戏" itemId="@RequestInt_id"/}
+            {PE.Label id="专区方案六_B论坛模块" itemId="@RequestInt_id"/}
+            {PE.Label id="专区方案六_B圈子模块" itemId="@RequestInt_id" gameName="{PE.Field id="cone" fieldname="Title"/}" /}
+        </div><!--Mid_L end-->
+
+        <div class="Mid_R">
+            {PE.Label id="专区方案六_B游戏信息" itemId="@RequestInt_id"/}
+
+            <div class="MidR_ad">
+                <!--#include File="/autoinc/abinc/ja/zq_right_300_1.htm"-->
+            </div>
+            {PE.Label id="专区方案六_趣味欣赏" itemId="@RequestInt_id" ZGameDir="{PE.Field id="cone" fieldname="ZGameDir"/}"/}
+            {PE.Label id="专区方案六_游戏资讯" itemId="@RequestInt_id" ZGameDir="{@cone.ZGameDir}"/}
+            {PE.Label id="专区方案六_点评文章" itemId="@RequestInt_id"/}
+            <div class="MidR_ad MidR_ad_new">
+                <!--#include File="/autoinc/ja_nest/common/zq_right_300_2.htm"-->
+            </div>
+
+            <div class="MidRtit"><div class="tit">最新热门游戏</div><div class="more"></div></div>
+            <div class="MidRcon">
+                <!--#include File="/autoinc/www/zq/zq_right.html"-->
+            </div><!--MidRcon end-->
+
+
+        </div><!--Mid_R end-->
+    </div><!--Mid end-->
+
+    <div class="Bot">
+        {@cone.Blogroll}
+        <script src="http://www.gamersky.com/autoinc/allsite/allsite_copyright_1_js.htm"></script>
+    </div><!--Bot end-->
+</div><!--center end-->
+
+<span id="countn" generalId="@RequestInt_id" style="display:none;"></span>
+{PE.Field ID="cone" fieldname="BottomAdvertisementNews" /}
+<!--#include File="/autoinc/abinc/www/zq_bottom.htm"-->
+<!--#include File="/autoinc/abinc/allsite_count.htm"-->
+{PE.Label id="专区方案五_B论坛模块JS" itemId="@RequestInt_id"/}
+
+</body>
+</html>

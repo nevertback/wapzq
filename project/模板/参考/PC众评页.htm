@@ -1,0 +1,281 @@
+{PE.DataSource id="cone" datasource="游戏库_内容页" dataCache="true" itemId="@RequestInt_id" xslt="true" /}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{PE.Field id="cone" fieldname="Subheading"/}众评_了解{PE.Field id="cone" fieldname="Subheading"/}评分评测与玩家评价-游民星空</title>
+    <meta name="keywords" content="{PE.Field id=" cone" fieldname="Subheading"/},{PE.Field id="cone" fieldname="EnTitle"/},{PE.Field id="cone" fieldname="Subheading"/}评分,{PE.Field id="cone" fieldname="Subheading"/}评测,{PE.Field id="cone" fieldname="Subheading"/}点评,{PE.Field id="cone" fieldname="Subheading"/}资料,{PE.Field id="cone" fieldname="Subheading"/}图片,{PE.Field id="cone" fieldname="Subheading"/}视频" />
+    <meta name="description" content="{PE.Field id=" cone" fieldname="Intro1"/}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <script src="http://j.gamersky.com/g/jquery-1.8.3.js"></script>
+    <script>var wapUrl = "{PE.Field id="cone" fieldname="KuUrl" trim="true" /}";var contentPageIndex=1;var pageIndex=1;</script>
+    <script src="http://j.gamersky.com/g/mobileesp.js"></script>
+    <!--#include File="/autoinc/abinc/ku_head_content.htm"-->
+</head>
+<body style="background-image:url({PE.Field id=" cone" fieldname="BackGround"/});">
+
+<!--#include File="/autoinc/abinc/ku_top.htm"-->
+
+<div class="Mid">
+    {PE.Field id="cone" fieldname="PicVideo"/}<!--Mid_T end-->
+    <div class="Mid_N">
+        <div class="Midnav">
+            <!--#include File="/autoinc/abinc/ku_content_nav.htm"-->
+            {PE.Field id="cone" fieldname="ZUrlLiI"/}
+            {PE.Field id="cone" fieldname="GiftCode"/}
+        </div>
+        <div class="Midfx">
+            <a href="javascript:;" class="fx">分享</a>
+            <div class="fxbg">
+                <div class="bdsharebuttonbox" data-tag="share_1">
+                    <a class="bds_sqq" data-cmd="sqq"></a>
+                    <a class="bds_weixin" data-cmd="weixin"></a>
+                    <a class="bds_tsina" data-cmd="tsina"></a>
+                    <a class="bds_qzone" data-cmd="qzone"></a>
+                    <a class="bds_tieba" data-cmd="tieba"></a>
+                </div>
+                <script>with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];</script>
+            </div>
+        </div>
+    </div>
+    <div class="Mid_L">
+        <div class="MidLcon block" tit="综合">
+            <!--游戏信息-->
+            <div class="YXXX" tit="游戏信息">
+                <div class="YXXX-L">
+                    <div class="img"><a target="_blank" href="http://www.gamersky.com/showimage.shtml?{PE.Field id=" cone" fieldname="DefaultPicUrlBig"/}"><img src="{PE.Field id=" cone" fieldname="DefaultPicUrl"/}" width="150" height="210" /></a></div>
+                    {PE.Field id="cone" fieldname="OriginalUrl"/}
+                </div>
+                <div class="YXXX-R">
+                    <div class="div1">
+                        <div class="tit_CH" gameid="@RequestInt_id">{PE.Field id="cone" fieldname="Title"/}</div>
+                        <div class="tit_EN">{PE.Field id="cone" fieldname="EnTitle"/}</div>
+                        <div class="fxjc">
+                            <div class="ContentCorrect"><a class="btnContentEvaluation" href="javascript:;">纠错</a></div>
+                        </div>
+                    </div>
+                    <div class="div2">
+                        <div class="win" tit="游戏平台">
+                            {PE.Field id="cone" fieldname="PingTai"/}
+                        </div>
+                        <div class="bdr">| </div>
+                        <div class="clock" title="游戏时长">
+                            {PE.Field id="cone" fieldname="GameTime"/}
+                        </div>
+                    </div>
+                    <div class="div3">
+                        <div class="tt1"><div class="tit">上市时间：</div><div class="time"><span>()</span></div></div>
+                        <div class="tt2">
+                            <div class="tit">游戏类型：</div>
+                            <div class="tag">
+                                {PE.Field id="cone" fieldname="GameProperties"/}
+                            </div>
+                        </div>
+                        {PE.Field id="cone" fieldname="OfficialChinese"/}
+                        <div class="tt2"><div class="tit">制作发行：</div><div class="txt">{PE.Field id="cone" fieldname="Production"/}</div></div>
+                    </div>
+                    <div class="div4">
+                        <div class="con"></div>
+                        <div class="con-hide">{PE.Field id="cone" fieldname="Intro"/}</div>
+                    </div>
+                </div>
+            </div>
+            <!--媒体评分-->
+            {PE.Field id="cone" fieldname="MediaRating"/}
+            <div class="pingtai" style="display:none">{PE.Field id="cone" fieldname="WjPingTai"/}</div>
+            <!--精品读物-->
+            <div class="MidLtit" {PE.Field id="cone" fieldname="xgydstyle"/}> <h3 class="t2">精品读物</h3>
+        </div>
+        <ul class="XGYDlist" {PE.Field id="cone" fieldname="xgydstyle"/} >
+        {PE.Label id="内容带图片的信息列表数据源" sourceId="titTop" bindStyle="新闻式" optionalCond="and (UT.GameLib=@RequestInt_id) "   models="1" bindModel="1"  outputQty="3"  nodes="11007,20402,20430,20924,21055,21065,21079,21080,20464" specials="0" itemListOrderType="3" titleLength="48" fieldValue="众评推荐" joinFieldMultipleValued="true" /}{PE.Repeat id="titTop" vtl="true" debug="true"}
+        <li>
+            <div class="head"><a href="${UserDomain}" target="_blank"><img src="${UserFace}" /><p>${Author}</p></a></div>
+            <div class="con">
+                <div class="tit"><a href="${ArticleUrl}" target="_blank">${Title}</a></div>
+                <div class="txt">${Intro}</div>
+                <div class="tem"><div class="pls"><span class="cy_comment" data-sid="${ArticleID}">0</span></div></div>
+            </div>
+            <div class="img"><a href="${ArticleUrl}" target="_blank"><img src="${DefaultPicUrl}" width="190" height="106" /></a></div>
+        </li>
+        {/PE.Repeat}
+        {PE.Label id="内容带图片的信息列表数据源" sourceId="list" bindStyle="新闻式" optionalCond="and (UT.GameLib=@RequestInt_id)"   models="1" bindModel="1"  outputQty="3"  nodes="21078" specials="0" itemListOrderType="3" titleLength="48" /}{PE.Repeat id="list" vtl="true" debug="true"}
+        <li>
+            <div class="head"><a href="http://www.gamersky.com/zl/preview/" target="_blank"><img src="http://image.gamersky.com/webimg15/zp/skygame.png" /><p>游民新闻中心</p></a></div>
+            <div class="img"><a href="${ArticleUrl}" target="_blank"><img src="${TopImage}" width="665" height="106" /></a></div>
+        </li>
+        {/PE.Repeat}
+        </ul>
+
+        <!--玩家点评-->
+        <div class="lxbdr">
+            {PE.Field id="cone" fieldname="Activity"/}
+            <div class="MidLtit"><h3 class="t3">玩家点评</h3><a href="javascript:;" class="itobtn"><span>我要点评</span></a></div>
+        </div>
+        <div class="remark zpcomment" id="Remark" sid="@RequestInt_id">
+            <div class="remark-nav">
+                <div class="nav1" id="remark-nav1">
+                    <a href="javascript:;" loadtype="0" class="cur">全部(<i>0</i>)</a>
+                    <a href="javascript:;" loadtype="1">玩过(<i>0</i>)</a>
+                    <a href="javascript:;" loadtype="2">想玩(<i>0</i>)</a>
+                    <a href="javascript:;" id="steam" loadtype="3" data-steamId="{PE.Field id="cone" fieldname="SteamId"/}" style="display: none;">STEAM评论</a>
+                </div>
+                <div class="nav2" id="remark-nav2">
+                    <a href="javascript:;" data-type="1" class="cur">最热</a>
+                    <a href="javascript:;" data-type="0">最新</a>
+                </div>
+            </div>
+            <!-- 以下内容为ajax加载 -->
+            <div class="remark-list"> </div>
+
+        </div><!-- remark -->
+    </div>
+    <div class="MidLcon none" tit="资讯">
+        <ul class="pictxt">
+            {PE.Label id="内容带图片的信息列表数据源" sourceId="zxlist" bindStyle="新闻式" optionalCond="and (UT.GameLib=@RequestInt_id)" contentLength="160" models="1" bindModel="1"  outputQty="10"  nodes="11007,20227,20401,20464,20225,1034,1043,20808,20894,20487,21002,20828" specials="0" itemListOrderType="3" titleLength="48" /}{PE.Repeat id="zxlist" vtl="true"}
+            #if(${Number}==1)
+            <style>
+                .Midnav a.a2 {
+                    display: block;
+                }
+            </style>
+            #end
+            <li><div class="img"><a href="${ArticleUrl}" target="_blank" title=""><img src="${DefaultPicUrl}" alt="" width="200" height="110" /></a></div><div class="con"><div class="tit"><a href="${ArticleUrl}" target="_blank" title="${Title}">${Title}</a></div><div class="txt">${Intro3}</div><div class="tme"><div class="time">${UpdateTime}</div><div class="pls cy_comment" data-sid="${ArticleID}">0</div></div></div></li>
+            #if(${Number}==10)
+            {PE.Field id="cone" fieldname="NewsUrlLinkHtml"/}
+            #end
+            {/PE.Repeat}
+        </ul>
+    </div><!-- MidLcon end -->
+    <div class="MidLcon none" tit="攻略">
+        <ul class="pictxt">
+            {PE.Label id="内容带图片的信息列表数据源" sourceId="gllist" bindStyle="新闻式" models="1" bindModel="1" optionalCond="and (UT.GameLib=@RequestInt_id)"  outputQty="10" nodes="11001,20824,20809,20810,20895,20896,980,981,988,21004,21005,21011,21012,20932,20933,20829,20830,20488,20489" specials="0" titleLength="50" imageWidth="200" contentLength="160" imageHeight="110" itemListOrderType="3" isPath="true" displayDateTime="yyyy-mm-dd" /}
+            {PE.Repeat id="gllist" vtl="true"}
+            #if(${Number}==1)
+            <style>
+                .Midnav a.a3 {
+                    display: block;
+                }
+            </style>
+            #end
+            <li>${ListArticleUrl}<div class="con"><div class="tit"><a href="${ArticleUrl}" target="_blank" title="${TitleOriginal}">${Title}</a></div><div class="txt">${Intro3}</div><div class="tme"><div class="time">${UpdateTime}</div><div class="link">${Tagpath}</div></div></div></li>
+            #if(${Number}==10)
+            {PE.Field id="cone" fieldname="HandbookUrlLinkHtml"/}
+            #end
+            {/PE.Repeat}
+        </ul>
+    </div><!-- MidLcon end -->
+    <div class="MidLcon none" tit="下载">
+        <ul class="download">
+            {PE.Label id="内容带图片的信息列表数据源" sourceId="downloadtj" bindStyle="下载式" outputQty="2" itemListOrderType="15" optionalCond="and (UT.GameLib=@RequestInt_id)" nodes="10002" specials="0" models="2" bindModel="2" /}
+            {PE.Repeat id="downloadtj" vtl="true"}
+            #set($number =${Number})
+            #if($number == 1)
+            <li class="img"><img src="${DownloadImg}" alt="" width="90" height="126" /></li>
+            #end
+            <li class="down"><a target="_blank" href="${SoftUrl}" title="${Title}"><p>${Title}</p><i></i></a></li>
+            {/PE.Repeat}
+        </ul>
+        <div class="MidLtit"><h3 class="t4">最近更新</h3></div>
+        <ul class="downlist">
+            {PE.Label id="内容带图片的信息列表数据源" sourceId="downlist" bindStyle="下载式" outputQty="30" optionalCond="and (UT.GameLib=@RequestInt_id)" itemListOrderType="3" nodes="10002" specials="0" models="2" bindModel="2" displayDateTime="yyyy-mm-dd" /}
+            {PE.Repeat id="downlist" vtl="true"}
+            #if(${Number}==1)
+            <style>
+                .Midnav a.a4 {
+                    display: block;
+                }
+            </style>
+            #end
+            <li><div class="txt"><span>[${ClassAbbrName}]</span><a target="_blank" href="${SoftUrl}" title="${Title}">${Title}</a></div><div class="time">${UpdateTime}</div></li>
+            #if(${Number}==30)
+            {PE.Field id="cone" fieldname="SoftDownUrlLinkHtml"/}
+            #end
+            {/PE.Repeat}
+        </ul>
+    </div><!-- MidLcon end -->
+
+</div><!-- Mid_L end -->
+<div class="Mid_R">
+    <div class="loading"></div>
+    <ul class="wjpf1 wjpf" tit="玩家评分" data-generalid="@RequestInt_id" data-type="0" style="display:none">
+        <li class="num">
+            <div class="num" id="scoreAvg">--</div>
+            <div class="pin">
+                <div class="xin"><div id="xin" class="x0"></div></div>
+            </div>
+            <div class="txt">玩家评分<span>(<span id="scoreTimes">0</span>人)</span></div>
+        </li>
+        <li class="con">
+            <div class="li-n"><div class="num">5星</div><div class="jindu"><div class="tiao" style="width:0px"></div></div><div class="bili">0%</div></div>
+            <div class="li-n"><div class="num">4星</div><div class="jindu"><div class="tiao" style="width:0px"></div></div><div class="bili">0%</div></div>
+            <div class="li-n"><div class="num">3星</div><div class="jindu"><div class="tiao" style="width:0px"></div></div><div class="bili">0%</div></div>
+            <div class="li-n"><div class="num">2星</div><div class="jindu"><div class="tiao" style="width:0px"></div></div><div class="bili">0%</div></div>
+            <div class="li-n"><div class="num">1星</div><div class="jindu"><div class="tiao" style="width:0px"></div></div><div class="bili">0%</div></div>
+            <div class="li-c Itoscore" data-wanurl="{PE.Field id="cone" fieldname="ItemUrl"/}user?type=played" data-xiangwanurl="{PE.Field id="cone" fieldname="ItemUrl"/}user?type=expect"></div>
+</li>
+</ul>
+<ul class="myscore2" tit="我的评分">
+    <li class="img"><img class="userimg" src="http://image.gamersky.com/webimg15/comment/anonymous.jpg" /></li>
+    <li class="fen">
+        <div class="ftxt" style="display:none;">
+            <div class="wtxt"></div>
+            <div class="wbtn">
+                <a href="javascript:;" class="editbtn">修改</a>
+                <a href="javascript:;" class="delbtn">删除</a>
+            </div>
+        </div>
+        <div class="fxin">
+            <div class="datetime" date-sellTime="未上市" tit="未评分" style="display:none;">
+                <a href="javascript:;" class="tpbtn" data-i="0" gameid="@RequestInt_id" data-sorce="1" data-type="7" data-click="false" FromDevice="0">想玩</a>
+                <a href="javascript:;" class="tpbtn" data-i="1" gameid="@RequestInt_id" data-sorce="1" data-type="8" data-click="false" FromDevice="0">玩过</a>
+            </div>
+            <div class="dfen" id="dfen" gameid="@RequestInt_id">
+                <span class="dftit" style="display:none;">评价：</span>
+                <a class="mybtn" href="javascript:;" fromdevice="0" data-txt="渣作"></a>
+                <a class="mybtn" href="javascript:;" fromdevice="0" data-txt="平庸"></a>
+                <a class="mybtn" href="javascript:;" fromdevice="0" data-txt="一般"></a>
+                <a class="mybtn" href="javascript:;" fromdevice="0" data-txt="佳作"></a>
+                <a class="mybtn" href="javascript:;" fromdevice="0" data-txt="神作"></a>
+                <span class="dftxt"></span>
+            </div>
+        </div>
+        <div class="fbtn">
+            <a href="javascript:;" class="pybtn">写评语</a>
+        </div>
+    </li>
+    <li class="doneTxt" style="display:none;"></li>
+    <li class="myTag" style="display:none;"></li>
+    <li class="myremark"></li>
+</ul>
+<div class="MidRtit useratg" style="display:none;"><h3>玩家常用标签</h3></div>
+<div class="WJCYtag" >
+</div>
+{PE.Field id="cone" fieldname="Peizhi2"/}
+<div class="MidRtit"><h3>喜欢该作的玩家还喜欢</h3></div>
+<div class="Slidepic">
+    <div class="con">
+        <ul class="Bimg" style="width: 960px;">
+            {PE.Label id="众评内容页想玩数据源" gameId="@RequestInt_id"  nodes="{PE.Field id="cone" fieldname="DeputyNodeId"/}" outputQty="6" /}
+        </ul>
+        <a href="javascript:;" class="btn Prev"></a>
+        <a href="javascript:;" class="btn Next"></a>
+    </div>
+</div><!--Slide end-->
+{PE.Label id="游戏库_系列游戏_众评" itemId="@RequestInt_id" /}
+<div class="MidRtit" id="ymtc" style="display:none"><h3>游民小调查</h3></div>
+{PE.Label id="游戏库内容页话题投票" itemId="@RequestInt_id"/}
+<!--#include File="/autoinc/ku/content_right_huodong.htm"-->
+
+</div><!-- Mid_R end -->
+</div><!--Mid end-->
+
+<div class="Bot">
+    <script src="http://www.gamersky.com/autoinc/allsite/allsite_copyright_1_js.htm"></script>
+</div><!--Bot end-->
+
+<span style="display:none" id="jcjbContentData" data-generalid="@RequestInt_id" title="{PE.Field id=" cone" fieldname="Title"/}"></span>
+<span id="countn" generalId="@RequestInt_id" style="display:none;"></span>
+<!--#include File="/autoinc/abinc/ku_bottom_js_new.htm"-->
+<script src="http://j.gamersky.com/web2015/ku/js/guanzhu.js"></script>
+</body>
+</html>

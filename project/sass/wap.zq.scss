@@ -1,0 +1,253 @@
+@import "funcss";
+@import "comm";
+@import "nav";
+@import "swp";
+@import "list";
+.gs-zq-game-info{
+    position: relative;
+    padding: 0 0 0.2rem;
+    min-height:2.5rem;
+    overflow: hidden;
+    background-color: #eee;
+    .bg{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        filter:blur(3px);
+        opacity: 0.1;
+        transform:translate(0,-50%);
+    }
+    .fm{
+        display: block;
+        position: absolute;
+        left: 0.2rem;
+        top: 0.37rem;
+        width: 1.21rem;
+        height: 1.7rem;
+        background-color: #333;
+        box-shadow: 0.15rem 0.15rem 0.25rem rgba(52,10,11,0.25);
+    }
+    .context{
+        position: relative;
+        margin-left: 1.65rem;
+        padding-top: 0.36rem;
+        width: 5.35rem;
+        .gs-zp-rating{
+            position: absolute;
+            top: 0.36rem;
+            right: 0;
+        }
+        .title{
+            margin-bottom: 0.2rem;
+            width: 3.9rem;
+            h4{
+                margin-bottom: 0.08rem;
+                line-height: 0.34rem;
+                font-size: 0.3rem;
+                color: #222;
+            }
+            h5{
+                line-height: 0.28rem;
+                font-size: 0.22rem;
+                color: #888;
+            }
+        }
+        .info{
+            padding-top: 0.15rem;
+            border-top: 1px solid rgba(170,170,170,0.3);
+            .time{
+                margin-top: -0.1rem;
+                p{
+                    display: none;
+                    &.cur{
+                        display: block;
+                    }
+                }
+            }
+            p{
+                margin-bottom: 0.1rem;
+                line-height: 0.3rem;
+                font-size: 0.22rem;
+                color: #222;
+                @include flexbox;
+                flex-flow: row wrap;
+                a{
+                    display: block;
+                    margin-bottom: 0.1rem;
+                    margin-right: 0.15rem;
+                    padding: 0 0.14rem;
+                    height: 0.3rem;
+                    line-height: 0.3rem;
+                    border: 1px solid #aaa;
+                    box-sizing: border-box;
+                    border-radius: 0.06rem;
+                    &.cur{
+                        color: #fff;
+                        background-color: #333;
+                        border-color: #333;
+                    }
+                }
+            }
+        }
+    }
+    .introduce{
+        margin-top: 0.3rem;
+        position: relative;
+        padding: 0 0.2rem;
+        .introduce-more{
+            display: block;
+            position: absolute;
+            right: 0.2rem;
+            top: 0;
+            line-height: 0.32rem;
+            font-size: 0.22rem;
+            color: #333;
+        }
+        p{
+            padding-right: 0.75rem;
+            line-height: 0.32rem;
+            font-size: 0.22rem;
+            color: #777;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        &.cur{
+            .introduce-more{
+                display: none;
+            }
+            p{
+                padding-right: 0;
+                white-space: normal;
+                overflow: auto;
+                text-overflow: initial;
+            }
+        }
+    }
+}
+.gs-zq-hng{
+    padding: 0.15rem 0 0.4rem;
+    background-color: #fff;
+    .gs-zq-hng-box{}
+    .gs-zq-hng-item{
+        display: none;
+        padding-top: 0.04rem;
+        .gs-zq-swp{
+            margin-bottom:0.42rem;
+        }
+        .gs-zq-list{
+            margin-bottom: 0.2rem;
+        }
+        &.cur{
+            display: block;
+        }
+    }
+}
+.gs-zq-gl{
+    background-color: #fff;
+    .gs-zq-gl-box{
+    }
+}
+.gs-zq-article-pc{
+    padding-bottom: 0.25rem;
+    background-color: #fff;
+}
+.gs-zq-video{
+    padding-bottom: 0.4rem;
+    background-color: #fff;
+}
+.gs-zq-images{
+    padding-bottom: 0.4rem;
+    background-color: #fff;
+    .gs-zq-swp{
+        height: 1.8rem;
+        .swiper-container{
+            height: 1.8rem;
+            .swiper-slide{
+                height: 1.8rem;
+                img{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+.gs-zq-label-wrap{
+    display: none;
+}
+.gs-zq-download{
+    padding-bottom: 0.55rem;
+    background-color: #fff;
+}
+.gs-zq-config{
+    padding-bottom: 0.6rem;
+    border-top: 1px solid #ebebeb;
+    background-color: #fff;
+    .gs_zp_pz_swp{
+        .swp_nav{
+            margin-bottom: 0.05rem;
+            padding-top: 0.1rem;
+            height: 0.64rem;
+            a{
+                margin-right: 0.88rem;
+                height: 0.60rem;
+                line-height: 0.60rem;
+                font-size: 0.26rem;
+                color: #333;
+                @extend %navlink;
+                &.cur{
+                    color: #f01a21;
+                }
+            }
+        }
+        .swp_con{
+            .swiper-container{
+                .swiper-slide{
+                    .pzwrap{
+                        margin: 0 0.2rem;
+                        padding: 0.1rem 0.28rem;
+                        background-color: #f5f9ff;
+                        border-radius: 0.05rem;
+                        .PZXQ .PZ li{
+                            height: auto;
+                            line-height: normal;
+                            //height: 0.5rem;
+                            //line-height: 0.5rem;
+                            border-bottom: none;
+                            .tit{
+                                @include flexbox;
+                                @include ConCenV;
+                                height: 100%;
+                                line-height: normal;
+                                min-height:0.5rem;
+                                //height: 0.5rem;
+                                //line-height: 0.5rem;
+                            }
+                            .txt{
+                                min-height:0.5rem;
+                                height: auto;
+                                //height: 0.5rem;
+                                span{
+                                    max-height:none;
+                                    line-height: 0.25rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.gs-zq-ku-comm{
+    background-color: #fff;
+}
+.gs-zq-club{
+    border-top: 1px solid #ebebeb;
+    .qzOuter{
+        padding-top: 0;
+    }
+}
+@import "lp";

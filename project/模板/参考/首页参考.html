@@ -1,0 +1,221 @@
+{PE.DataSource id="cone" datasource="手游专区_内容页" itemId="@RequestInt_id" xslt="true" /}
+<!DOCTYPE html>
+<html lang="en" class="ymwsysty">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>{@cone.title2} _ 游民星空手游专区手机版</title>
+    <meta name="keywords" content="{@cone.keywords}" />
+    <meta name="description" content="{@cone.description}" />
+    <!--#include File="/autoinc/abinc/new_wap_header.htm"-->
+    <link rel="stylesheet" href="http://j.gamersky.com/wap/z/css/style.css" />
+</head>
+<body>
+<!--#include File="/autoinc/abinc/new_wap_nav.htm"-->
+<!-- 幻灯 -->
+{PE.Label id="WAP手游专区幻灯片" itemid="@RequestInt_id" number="5" /}
+<!-- 幻灯 end-->
+<section class="ymw-congame ymw-congame-m">
+    <aside class="clearfix ymw-congame-infos">
+        <div class="ymw-congame-infos-img">
+            <img src="{PE.Label id="获取手机游戏库列表" GeneralID="{@cone.GameLib}" type="4" /}" alt="{@cone.Title}">
+        </div>
+        <div class="ymw-congame-infos-txt">
+            <dl>
+                <dt><h1>{@cone.Title}</h1></dt>
+                <dd><p>开发：{PE.Label id="获取手机游戏库列表" GeneralID="{@cone.GameLib}" type="17" /}</p></dd>
+                <dd><p>类型：{PE.Label id="获取手机游戏库列表" GeneralID="{@cone.GameLib}" type="18" /}</p></dd>
+                <dd><p class="ymw-congame-infos-txt-bq">{PE.Label id="Wap手游TAG" tag="{PE.Label id="获取手机游戏库列表" GeneralID="{@cone.GameLib}" type="19" /}"/}</p></dd>
+            </dl>
+        </div>
+    </aside>
+    <aside class="ymw-congame-m-dlwrap">
+        <div class="ymw-congame-m-dl-and" style='display:{PE.Label id="获取手机游戏库列表" GeneralID="{@cone.GameLib}" type="8" /}'>
+            <a data-fieldname="AndroidDownloadUrl" data-hot="true" data-itemid="{@cone.GameLib}" href=" http://db4.gamersky.com/Common/ShowDownloadUrl.aspx?urlid=0&amp;id={@cone.GameLib}&amp;Field=AndroidDownloadUrl"><i></i>安卓下载</a>
+        </div>
+        <div class="ymw-congame-m-dl-ios" style='display:{PE.Label id="获取手机游戏库列表" GeneralID="{@cone.GameLib}" type="9" /}'>
+            <a data-fieldname="AppleDownloadUrl" data-hot="true" data-itemid="{@cone.GameLib}" href=" http://db4.gamersky.com/Common/ShowDownloadUrl.aspx?urlid=0&amp;id={@cone.GameLib}&amp;Field=AppleDownloadUrl"><i></i>IOS下载</a>
+        </div>
+    </aside>
+    <aside class="ymw-pingfen ymw-pingfen-gray">
+        <div class="ymw-pingfen-zs ratingGroup" data-generalid="{@cone.GameLib}" data-tips="投票">
+            <div class="ymw-pf-res">
+                <span>游民指数：</span>
+                <i id="Sorce">0</i>
+            </div>
+            <div class="ymw-pf-btnwrap">
+                <a href="javascript:;" class="ymw-pf-lk ymw-pf-like ratingGroupAction" data-generalid="{@cone.GameLib}" data-sorce="1" data-tips="投票" data-type="5" data-group="like" data-totleid="like">喜欢:<i id="like">0</i></a>
+                <a href="javascript:;" class="ymw-pf-lk ymw-pf-unlike ratingGroupAction" data-generalid="{@cone.GameLib}" data-sorce="1" data-tips="投票" data-type="6" data-group="like" data-totleid="unlike">不喜欢:<i id="unlike">0</i></a>
+            </div>
+        </div>
+        <div style="display:none" class="ratingAction" data-tips="评分" data-generalid="{@cone.GameLib}" data-sorce="1" data-type="0" data-avgscore="scoreAvg" data-totleid="scoreTimes"></div>
+        <div class="ymw-pingfen-upf webScore" data-generalid="{@cone.GameLib}">
+            <div class="ymw-pf-res">
+                <span>玩家评分：</span>
+                <i id="scoreAvg">0</i>
+            </div>
+            <div class="ymw-pf-btnwrap">
+                <a id="myScore" href="javascript:;" class="ymw-pf-btn" data-generalid="{@cone.GameLib}" data-tips="评分" data-type="0"><span class="ymw-pf-btn-s1">点击评分</span><span class="ymw-pf-btn-s2">(<i id="scoreTimes">0</i>人参与)</span></a>
+            </div>
+        </div>
+    </aside>
+</section>
+<section class="ymwsy-toutiao mb8">
+    {PE.Label id="内容带图片的信息列表数据源" sourceId="top" bindStyle="新闻式"  models="1" nodes=" 20260"  bindModel="1"  displayDateTime="yyyy-mm-dd hh:ff" outputQty="2" titleLength="50" itemListOrderType="3" linkOpenType="1" gameLib="{@cone.GameLib}" fieldValue="专区头条" joinFieldMultipleValued="true" fieldName="ZFocus" /}
+    {PE.Repeat id="top" vtl = "true"}
+    #set($lc = "")
+    #if(${TitleFontColor} != "")
+    #set($lc = "ymw-danger")
+    #end
+    <a href="${WapArticleUrl}" class="$lc">${Title}</a>
+    {/PE.Repeat}
+</section>
+<h4 class="ymwsy-title-lev2"><span><i class="ymwsy-ico1"></i>热门推荐</span>
+    {PE.Label id="内容带图片的信息列表数据源" sourceId="rementuijianbtn" bindStyle="新闻式"  models="1" nodes=" 20260"  bindModel="1"  displayDateTime="yyyy-mm-dd hh:ff"  outputQty="8" titleLength="50" itemListOrderType="3" linkOpenType="1" gameLib="{@cone.GameLib}" fieldValue="专区八图" joinFieldMultipleValued="true" fieldName="ZFocus" /}
+    {PE.Repeat id="rementuijianbtn" vtl = "true"}
+    #if(${Number}==5)
+    <a href="javascript:;" class="ymwsy-more-chage ymwsyMc">换一批</a>
+    #end
+    {/PE.Repeat}
+</h4>
+<ul class="clearfix ymw-list-pic ymwsyMcLi">
+    {PE.Label id="内容带图片的信息列表数据源" sourceId="rementuijian" bindStyle="新闻式"  models="1" nodes=" 20260"  bindModel="1"  displayDateTime="yyyy-mm-dd hh:ff"  outputQty="8" titleLength="50" itemListOrderType="3" linkOpenType="1" gameLib="{@cone.GameLib}" fieldValue="专区八图" joinFieldMultipleValued="true" fieldName="ZFocus" /}
+    {PE.Repeat id="rementuijian" vtl = "true"}
+    <li>
+        ${WapArticlePic}
+        <h5>${Title}</h5>
+        <a href="${WapArticleUrl}"></a>
+    </li>
+    {/PE.Repeat}
+</ul>
+{@cone.WapHotRecommend}
+<section class="ymwsyTab mb8 mt8">
+    <aside class="ymwsyTabNav">
+        <nav class="clearfix">
+            <a href="javascript:;">攻略</a>
+            <a href="javascript:;">资料</a>
+            <a href="javascript:;">问答</a>
+            <a href="javascript:;">资讯</a>
+        </nav>
+    </aside>
+    <div class="swiper-container ymwsyTabCon">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <ul class="clearfix ymw-list-txt" style="padding:0">
+                    {PE.Label id="内容带图片的信息列表数据源" sourceId="syzqgl" usePage="false" bindStyle="新闻式" displayDateTime="yyyy-mm-dd" models="1" bindModel="1"  outputQty="6"  nodes="20994" specials="0" gameLib="{@cone.GameLib}"  itemListOrderType="3" titleLength="48"/}
+                    {PE.Repeat id="syzqgl" vtl="true"}
+                    #set($lc = "")
+                    #if(${TitleFontColor} != "")
+                    #set($lc = "yu-danger")
+                    #end
+                    <li>
+                        <a href="${WapArticleUrl}">
+                            <h5 class="$lc">${Title}</h5>
+                            <time>${UpdateTime}</time>
+                        </a>
+                    </li>
+                    {/PE.Repeat}
+                    <a href="http://wap.gamersky.com/z/{@cone.ZGameDir}/{@cone.GameLib}_33233/" class="ymwsy-tabnav-more"><span>查看更多</span></a>
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <ul class="clearfix ymw-list-txt" style="padding:0">
+                    {PE.Label id="内容带图片的信息列表数据源" sourceId="syzqzl" usePage="false" bindStyle="新闻式" displayDateTime="yyyy-mm-dd" models="1" bindModel="1"  outputQty="6"  nodes="20995" specials="0" gameLib="{@cone.GameLib}"  itemListOrderType="3" titleLength="48"/}
+                    {PE.Repeat id="syzqzl" vtl="true"}
+                    #set($lc = "")
+                    #if(${TitleFontColor} != "")
+                    #set($lc = "yu-danger")
+                    #end
+                    <li>
+                        <a href="${WapArticleUrl}">
+                            <h5 class="$lc">${Title}</h5>
+                            <time>${UpdateTime}</time>
+                        </a>
+                    </li>
+                    {/PE.Repeat}
+                    <a href="http://wap.gamersky.com/z/{@cone.ZGameDir}/{@cone.GameLib}_32615/" class="ymwsy-tabnav-more"><span>查看更多</span></a>
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <ul class="clearfix ymw-list-txt" style="padding:0">
+                    {PE.Label id="内容带图片的信息列表数据源" sourceId="syzqques" usePage="false" bindStyle="新闻式" displayDateTime="yyyy-mm-dd" models="1" bindModel="1"  outputQty="6"  nodes="20996" specials="0" gameLib="{@cone.GameLib}" itemListOrderType="3" titleLength="48"/}
+                    {PE.Repeat id="syzqques" vtl="true"}
+                    #set($lc = "")
+                    #if(${TitleFontColor} != "")
+                    #set($lc = "yu-danger")
+                    #end
+                    <li>
+                        <a href="${WapArticleUrl}">
+                            <h5 class="$lc">${Title}</h5>
+                            <time>${UpdateTime}</time>
+                        </a>
+                    </li>
+                    {/PE.Repeat}
+                    <a href="http://wap.gamersky.com/z/{@cone.ZGameDir}/{@cone.GameLib}_34425/" class="ymwsy-tabnav-more"><span>查看更多</span></a>
+                </ul>
+            </div>
+            <div class="swiper-slide">
+                <ul class="clearfix ymw-list-txt" style="padding:0">
+                    {PE.Label id="内容带图片的信息列表数据源" sourceId="syzqzxzx" usePage="false" bindStyle="新闻式" displayDateTime="yyyy-mm-dd" models="1" bindModel="1"  outputQty="6"  nodes="20261" specials="0" gameLib="{@cone.GameLib}" itemListOrderType="3" titleLength="48"/}
+                    {PE.Repeat id="syzqzxzx" vtl="true"}
+                    #set($lc = "")
+                    #if(${TitleFontColor} != "")
+                    #set($lc = "yu-danger")
+                    #end
+                    <li>
+                        <a href="${WapArticleUrl}">
+                            <h5 class="$lc">${Title}</h5>
+                            <time>${UpdateTime}</time>
+                        </a>
+                    </li>
+                    {/PE.Repeat}
+                    <a href="http://wap.gamersky.com/z/{@cone.ZGameDir}/{@cone.GameLib}_44604/" class="ymwsy-tabnav-more"><span>查看更多</span></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{@cone.WapData}
+<h4 class="ymwsy-title-lev2"><span><i class="ymwsy-ico3"></i>精彩视频</span><a href="http://wap.gamersky.com/z/{@cone.ZGameDir}/{@cone.GameLib}_41621/">+更多</a></h4>
+<ul class="clearfix ymw-list-pic mb8">
+    {PE.Label id="内容带图片的信息列表TAG数据源" sourceId="video" gameLib="{@cone.GameLib}" tag="视频"  bindStyle="新闻式" models="1" bindModel="1" outputQty="4" nodes="20260" specials="0"  itemListOrderType="3" titleLength="48"/}
+    {PE.Repeat id="video" vtl="true"}
+    <li>
+        <div class="imgwrap">
+            ${ArticlePic}
+            <i></i>
+        </div>
+        <h5>${Title}</h5>
+        <a href="${WapArticleUrl}"></a>
+    </li>
+    {/PE.Repeat}
+</ul>
+<h4 class="ymwsy-title-lev2"><span><i class="ymwsy-ico4"></i>游戏图库</span><a href="http://wap.gamersky.com/z/{@cone.ZGameDir}/{@cone.GameLib}_47062/">+更多</a></h4>
+<ul class="clearfix ymw-list-pic">
+    {PE.Label id="内容带图片的信息列表数据源" sourceId="yxpic" gameLib="{@cone.GameLib}"   bindStyle="新闻式" models="1" bindModel="1" outputQty="2" nodes="20993" specials="0"  itemListOrderType="20" titleLength="48"/}
+    {PE.Repeat id="yxpic" vtl="true"}
+    <li>
+        ${ArticlePic}
+        <h5>${Title}</h5>
+        <a href="${WapArticleUrl}"></a>
+    </li>
+    {/PE.Repeat}
+</ul>
+<section class="ymw-comm">
+    <div id="SOHUCS" sid="@RequestInt_id"></div>
+    <!--#include File="/autoinc/abinc/new_wap_commentjs.htm"-->
+</section>
+
+{@cone.Appointment}
+
+<span id="wapcountn" generalId="@RequestInt_id" style="display:none;"></span>
+<!--#include File="/autoinc/abinc/new_wap_footer_t.htm"-->
+<a href="http://shouyou.gamersky.com/z/{@cone.ZGameDir}/?tag=wap" class="ymw-btns ymw-btns-pc">
+    <!--#include File="/autoinc/abinc/new_wap_footer_b.htm"-->
+    <script src="http://j.gamersky.com/wap/z/js/myscript.min.js"></script>
+</body>
+</html>

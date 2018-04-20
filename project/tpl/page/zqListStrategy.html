@@ -1,0 +1,18 @@
+<!--page zqListNews.html-->
+<div class="gs-zq-lp gs-zq-lp-strategy gsZqLp">
+    @@include('list/nav.html',{
+        "news":"",
+        "strategy":"cur",
+        "download":""
+    })
+    <div class="gzls-rmd">
+        <h5 class="gzls-rmd-title">综合推荐</h5>
+        @@include('../components/zqList.html',{"sum":3})
+        <div class="gsZqGetMoreTar0">
+            @@include('../components/zqListTxt.html',{"sum":5,"node":"no"})
+        </div>
+        <a class="gs-zq-more gs-zq-more-blue gzls-rmd-more gsZqGetMore" data-tar="gsZqGetMoreTar0" data-tmk="testwapzqmore" data-nid="796" data-page="1">更多</a>
+    </div>
+    <div id="gsZqStrategyShow"></div>
+    @@include('part/zqGl.html')
+</div>

@@ -1,0 +1,176 @@
+{PE.DataSource id="cone" datasource="软件_内容页" itemId="@RequestInt_id" xslt="true" /}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{PE.Label id="下载内容页游戏Title" itemId="{PE.Field id="cone" fieldname="GameLib" /}" softLanguage="{PE.Field id="cone" fieldname="SoftLanguage" /}" title="{PE.Field id="cone" fieldname="TitleIntact" /}" /} - 游民星空下载中心</title>
+    {PE.Label id="下载内容页keywords-下载" itemId="@RequestInt_id" /}
+    <meta name="description" content="{PE.Field id=" cone" fieldname="SoftIntroEncodeReplace" /}"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <script>var wapUrl = "http://wap.gamersky.com/soft/Content-{PE.Field id="cone" fieldname="GeneralID" /}{GS.CurrentPageFile/}.html";var contentPageIndex={GS.CurrentPageIndex/};var pageIndex=@RequestInt_page ;</script>
+    <!--#include File="/autoinc/abinc/head_content.htm"-->
+</head>
+
+<body>
+<!--#include File="/autoinc/abinc/top_content.htm"-->
+<div class="Mid">
+    <div class="Mid_top">
+        <!--#include File="/autoinc/ja_nest/banner/new_top_allsite_970_1.htm"-->
+        <div class="Mid0">
+            <!--#include File="/autoinc/allsite/top_hotgame.htm"-->
+        </div><!--Mid0 end-->
+        <!--通栏广告-->
+        <!--#include File="/autoinc/ja_nest/banner/new_top_allsite_970_2.htm"-->
+        <!--#include File="/autoinc/ja_nest/banner/new_top_allsite_970_3.htm"-->
+        <div class="Mid1">
+            <div class="Mid1nav">
+                <a href="javascript:;" class="like cur">游戏下载</a>
+                <a href="javascript:;" id="newlike" class="like" templateKey="newstate">最新动态</a>
+                <a href="javascript:;" id="gllike" class="like" templateKey="hotgl">热门攻略</a>
+                <a href="{PE.Label id="获取游戏库信息列表" gamelib="{PE.Field id="cone" fieldname="GameLib" /}" type="12"/}" class="like2" id="zqlike" target="_blank">游戏专区</a>
+            </div><!--Mid1_L end-->
+            <!--#include File="/autoinc/abinc/search_content.htm"-->
+        </div><!--Mid1 end-->
+    </div>
+
+    <div class="Mid2">
+        <div class="Mid2_L">
+            <div class="Mid2L_ctt block">
+                <div class="Mid2L_crumb"><a href="http://www.gamersky.com/">游民星空</a>&nbsp;>&nbsp;{PE.Label id="当前位置导航V4" splitChar=">" nodeId="{@cone.NodeID}" /}&nbsp;>&nbsp;<span>下载</span></div>
+                <div class="Mid2L_actdl2">
+                    <span style="display:none" data-tableName="PE_U_Soft" id="jcjbContentData" data-nodeId="20352,20380,20381" data-generalid="@RequestInt_id" title="{PE.Field id="cone" fieldname="Title" /}"></span>
+                    <div class="tit">{PE.Field id="cone" fieldname="TitleIntact" /}</div>
+                    <div class="game">
+                        <div class="img">
+                            <img src="{PE.Field id="cone" fieldname="DefaultPicUrl" /}" width="160" height="225" /><div class="heat"><div class="num"><span id="hot" class="hotdegree"  data-gamelib="{PE.Field id="cone" fieldname="GameLib" /}" data-ganeralid="{PE.Field id="cone" fieldname="GeneralID" /}"></span></div></div>
+                        </div>
+                        <div class="con">
+                            <div class="info">
+                                <ul class="YXXX">
+                                    <li><div class="tt">中文名称：</div><div class="txt">{PE.Label id="获取游戏库信息列表" gamelib="{PE.Field id="cone" fieldname="GameLib" /}" type="3"/}</div></li>
+                                    <li><div class="tt">发布日期：</div><div class="txt">{PE.Field id="cone" fieldname="UpdateTime" /}</div></li>
+                                    <li><div class="tt">更新日期：</div><div class="txt">{PE.Field id="cone" fieldname="VersionUpdateTime" /}</div></li>
+                                    <li><div class="tt">文件大小：</div><div class="txt">{PE.Field id="cone" fieldname="SoftSize" /}</div></li>
+                                    <li><div class="tt">游戏语言：</div><div class="txt"><a target="_blank" href="http://down.gamersky.com/pc/0-0-{PE.Field id="cone" fieldname="LanguageNunber" /}-0-0-0-0-00.html">{PE.Field id="cone" fieldname="SoftLanguage" /}</a></div></li>
+                                </ul>
+                                <ul class="YXXX">
+                                    <li><div class="tt">英文名称：</div><div class="txt">{PE.Label id="获取游戏库信息列表" gamelib="{PE.Field id="cone" fieldname="GameLib" /}" type="5"/}</div></li>
+                                    <li><div class="tt">游戏制作：</div><div class="txt">{PE.Label id="获取游戏库信息列表" gamelib="{PE.Field id="cone" fieldname="GameLib" /}" type="14"/}</div></li>
+                                    <li><div class="tt">游戏发行：</div><div class="txt">{PE.Label id="获取游戏库信息列表" gamelib="{PE.Field id="cone" fieldname="GameLib" /}" type="15"/}</div></li>
+                                    <li><div class="tt">上市时间：</div><div class="txt">{PE.Field id="cone" fieldname="MarketTime" /}</div></li>
+                                    <li><div class="tt">官方网址：</div><div class="txt">{PE.Label id="获取游戏库信息列表" gamelib="{PE.Field id="cone" fieldname="GameLib" /}" type="16"/}</div></li>
+                                </ul>
+                                <div class="li"><div class="tt">运行系统：</div><div class="txt">{PE.Field id="cone" fieldname="OperatingSystem" /}</div></div>
+                            </div>
+                            <div class="tag">
+                                <a target="_blank" href="http://down.gamersky.com/pc/{PE.Label id="获取节点nodedir" nodeid="{PE.Field id="cone" fieldname="NodeID" /}"/}/">{PE.Field id="cone" fieldname="NodeName" /}</a>{PE.Label id="新_下载内容页TAG" tag="{PE.Field id="cone" fieldname="GameTag" /}"/}
+                            </div>
+                            <div class="btn"><a href="javascript:;" class="Un" onclick="$(this).toggleClass('Un On');$('ul.YXXX li,.li').toggleClass('cls')">详细信息</a></div>
+                            <!--#include File="/autoinc/abinc/ja/down_info.htm"-->
+                        </div>
+                    </div>
+                </div>
+                {PE.Field id="cone" fieldname="CloseDownloadTOPHint" /}
+                <div class="Mid2L_nav">
+                    <div class="Mid2Lnav">
+                        <a href="javascript:;" onclick="$('html,body').scrollTop($('.intr').offset().top-100)" class="cur">游戏介绍</a>
+                        <a href="javascript:;" onclick="$('html,body').scrollTop($('.YXSM_CJWT').offset().top-50)"><span class="dow">游戏下载</span></a>
+                        <a href="javascript:;" onclick="$('html,body').scrollTop($('.Comment').offset().top-50)">玩家评论<span class="pl">(<span class="cy_comment" data-sid="@RequestInt_id">0</span>)</span></a>
+                    </div>
+                </div>
+                <div class="Mid2L_con">
+                    <div class="intr">
+                        {PE.Field id="cone" fieldname="SoftIntro" /}
+                    </div>
+
+                    <div id="videotitl" class="titl">游戏视频</div>
+                    <div class="video">
+                        <div class="video_nav">
+                            {PE.Field id="cone" fieldname="Video1" /}
+                            {PE.Field id="cone" fieldname="Video2" /}
+                        </div>
+                        <div class="video_play">
+                            <div class="playAreaConfig" id="gamersky_player_box" data-height="387" data-width="598">
+                                <!--视频播放器-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="Bimg" class="titl" style="display:none;">游戏图片</div>
+                    <div class="imgshow" style="display:none;">
+                        <ul class="Bimg">
+                            {PE.Field id="cone" fieldname="GameImg" /}
+                        </ul>
+                        <div class="btn Lbtn"></div>
+                        <div class="btn Rbtn"></div>
+                        <a class="fangda" href="" target="_blank">大图</a>
+                        <div class="demo2">
+                            <ul class="jscroll-c">
+                                {PE.Field id="cone" fieldname="SlideShow" /}
+                            </ul>
+                            <div class="jscroll-e"><a href="javascript:;" class="jscroll-h"></a></div>
+                        </div>
+                    </div>
+
+                    <div id="peizhi" class="titl">配置需求</div>
+                    {PE.Field id="cone" fieldname="GameConfiguration" /}
+                    <div class="YXSM_CJWT">
+                        <div class="YXSM">
+                            <div class="titl">版本及运行说明</div>
+                            <ul class="YXSMlist">
+                                {PE.Field id="cone" fieldname="RunExplain" /}
+                            </ul>
+                        </div>
+                        <div class="CJWT">
+                            <div id="gameRecentNews" style="display:none;"></div>
+                        </div>
+                    </div><!--YXSM_CJWT end-->
+                    <!--#include File="/autoinc/abinc/down_content_qa.htm"-->
+                    <div class="Download">
+                        <div class="dl_tit lx0">游戏下载</div>
+                        <div class="dl_url">
+                            {PE.Label id="新_下载_全部下载地址" displayType="bd" itemId="@RequestInt_id" xslt="true" /}
+                        </div>
+                        <div class="dl_tit">同类手游推荐</div>
+                        {PE.Label id="获取游戏库信息列表"  gamelib="{PE.Field id="cone" fieldname="GameLib" /}" type="23"/}
+                        <!--#include File="/autoinc/abinc/ja/down_link.htm"-->
+                        <!--#include File="/autoinc/abinc/mianze.htm"-->
+                    </div><!--Download end-->
+                    <!--#include File="/autoinc/abinc/down_content_share.htm"-->
+                    {PE.Field id="cone" fieldname="gonglueInc" /}
+                    {PE.Field id="cone" fieldname="KuIncV2" /}
+                    <div id="keyword" class="titl">系列游戏</div>
+                    <div class="SlidePic">
+                        <div class="con">
+                            <ul class="Bimg">
+                                {PE.Label id="内容带图片的信息列表关键字数据源" sourceId="keywordnews" bindStyle="游戏库式" keyword="{PE.Label id="获取游戏库信息列表" gamelib="{PE.Field id="cone" fieldname="GameLib" /}" type="11"/}" usePage="false" outputQty="10" titleLength="44" nodes="20039" itemListOrderType="3" linkOpenType="1" models="27" bindModel="27" imageWidth="105" imageHeight="144" displayDateTime="yyyy-mm-dd" /}
+                                {PE.Repeat id="keywordnews"}
+                                <li><a href="{$GamesUrl2}" target="_blank" title="{$GamesName}">{$ArticlePic}{$GamesName}</a></li>
+                                {/PE.Repeat}
+                            </ul>
+                        </div>
+                        <a href="javascript:;" class="Next"></a>
+                    </div>
+
+                    {PE.Label id="众评评论调用" gamelib="{@cone.GameLib}" gameUrl="{PE.Label id="获取游戏库信息列表" gamelib="{@cone.GameLib}" type="26"/}" /}
+
+                    <div class="Mtit lx0"><div class="tit"></div></div>
+                    <div class="Comment">
+                        <div id="SOHUCS" sid="{PE.Field id="cone" fieldname="GeneralID"/}"></div>
+                    <!--#include File="/autoinc/allsite/pc_comment_js.htm"-->
+                </div>
+            </div><!--Mid2L_con end-->
+        </div><!--Mid2L_ctt end-->
+        <div class="loadpic none"><span class="img"></span><span class="txt">正在加载...</span></div>
+        <div id="zxdt" class="Mid2L_ctt none"></div><!--ctt end-->
+        <div id="rmgl" class="Mid2L_ctt none"></div><!--ctt end-->
+        <!--#include File="/autoinc/abinc/bottom_comment_down.htm"-->
+    </div><!--Mid2_L end-->
+    <!--#include File="/autoinc/abinc/down_content_right.htm"-->
+</div><!--Mid2 end-->
+
+</div><!--Mid end-->
+<!--#include File="/autoinc/abinc/bottom_down.htm"-->
+<!--#include File="/autoinc/abinc/bottom_count_game.htm"-->
+</body>
+</html>

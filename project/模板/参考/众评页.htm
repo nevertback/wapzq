@@ -1,0 +1,384 @@
+{PE.DataSource id="cone" datasource="游戏库_内容页" dataCache="true" itemId="@RequestInt_id" xslt="true" /}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="dns-prefetch" href="//www.gamersky.com">
+    <link rel="dns-prefetch" href="//ja.gamersky.com">
+    <link rel="dns-prefetch" href="//j.gamersky.com">
+    <link rel="dns-prefetch" href="//db5.gamersky.com">
+    <link rel="dns-prefetch" href="//i.gamersky.com">
+    <link rel="dns-prefetch" href="//cm.gamersky.com">
+    <link rel="dns-prefetch" href="//imgs.gamersky.com">
+    <link rel="dns-prefetch" href="//image.gamersky.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="wap-font-scale" content="no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>{@cone.WapTitle}</title>
+    <meta name="keywords" content="{@cone.Title},{@cone.EnTitle},{@cone.Title}下载,{@cone.Title}中文版,{@cone.Title}汉化,{@cone.Title}攻略,{@cone.Title}视频{@cone.Title}新闻">
+    <meta name="description" content="{@cone.Intro1}">
+    <!--#include File="/autoinc/abinc/new_wap_header_ku.htm"-->
+</head>
+<body>
+<!--#include File="/autoinc/abinc/new_wap_nav.htm"-->
+<div class="gs_zp_wrap">
+    <section class="gs_zp" id="gsZp">
+        <div class="gs_zp_box">
+            <div class="gs_zp_box_con gs_zp_infos">
+                <div class="game_top">
+                    <img class="game_fm" src="{@cone.DefaultPicUrl}" alt="{@cone.Title}">
+                    <div class="game_txt">
+                        <h5>{@cone.Title}</h5>
+                        <h6>{@cone.EnTitle}</h6>
+                        <div class="game_score sc_loading userrating" gameId="@RequestInt_id">
+                            <div class="num">0</div>
+                            <div class="gs_zp_star_group"><i style="width:0"></i></div>
+                            <div class="comm"><span>0</span>人评价</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game_mid">
+                    <div class="clearfix platform" id="platform">
+                        {@cone.WapPingTai}
+                    </div>
+                    <div class="time"><i></i><span>{@cone.GameTime}</span></div>
+                    <div class="tag_wrap">
+                        <div class="tit">标签：</div>
+                        <div class="tag swiper-container ku-tags" id="kuTags">
+                            <div class="swiper-wrapper">
+                                {PE.Field id="cone" fieldname="WapNodeDirTag"/}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="game_bot dataTime" style="display:none">
+                    <div class="btngroup">
+                        <a class="want btnAddRemark" gameId="@RequestInt_id" data-isclk="true" data-type="7">想玩<span>(<i>0</i>)</span></a>
+                        <a class="played btnAddRemark" gameId="@RequestInt_id" data-isclk="true" data-type="8">玩过<span>(<i>0</i>)</span></a>
+                    </div>
+                    <!--#include File="/autoinc/abinc/ja/wap_kudown_androidios.htm"-->
+                </div>
+            </div>
+            <div class="gs_zp_nav_pos" id="gsZpTabNavPos">
+                <div class="clearfix gs_zp_nav" id="gsZpTabNav">
+                    <a class="cur"><span>详情</span></a>
+                    <a><span>点评<i>0</i></span></a>
+                    <a templatekey="wapgamegl" pageIndex="2" nodeId="20066" scrollpagination="true"><span>攻略</span></a>
+                    <a templatekey="wapgamenews" pageIndex="2" nodeId="20066" scrollpagination="true"><span>新闻</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="gs_zp_items">
+            <div class="gs_zp_item cur">
+                <div class="gs_zp_box">
+                    <div class="gs_zp_box_con">
+                        <div class="gs_zp_myscore">
+                            <div class="zp_title">我的点评</div>
+                            <a class="score_btn btnAddRemark addreview" gameId="@RequestInt_id">添加点评</a>
+                            <div class="gs_zp_myscore_top">
+                                <div class="head">
+                                    <img class="headpic" src="http://image.gamersky.com/webimg15/comment/anonymous.jpg" alt="head">
+                                    <span>登陆后点评</span>
+                                </div>
+                                <div class="clearfix gs_zp_star scorestar">
+                                    <a class="stars btnAddStarRemark" data-num="0"></a>
+                                    <a class="stars btnAddStarRemark" data-num="1"></a>
+                                    <a class="stars btnAddStarRemark" data-num="2"></a>
+                                    <a class="stars btnAddStarRemark" data-num="3"></a>
+                                    <a class="stars btnAddStarRemark" data-num="4"></a>
+                                </div>
+                            </div>
+                            <div class="gs_zp_myscore_comment mycomment "></div>
+                            <div class="gs_zp_myscore_bot" style="display:none"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--#include File="/autoinc/abinc/ja/wap_ku_tl.htm"-->
+                <div class="gs_zp_box gs_zp_details">
+                    {PE.Label id="WAP内容页图库图片" gameId="@RequestInt_id" /}
+                    <div class="gs_zp_context">
+                        <div class="gs_zp_context_title">内容简介</div>
+                        <div class="con">
+                            {@cone.Intro}
+                        </div>
+                    </div>
+                    <div class="gs_zp_pz_swp" id="pzMain">
+                        <div class="swp_nav">
+                            <a>详细信息</a>
+                            <a>最低配置</a>
+                            <a>推荐配置</a>
+                        </div>
+                        <div class="swp_con">
+                            <div class="swiper-container" id="zpPzSwp">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="infos">
+                                            <p><span class="tit">制作发行：</span><span class="txt">{@cone.Production}</span></p>
+                                            {@cone.WapOfficialChinese}
+                                            <p><span class="tit">上市时间：</span><span class="txt">{@cone.WapAllPingTaiTime}</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pzwrap pz_data">
+                                            {@cone.Peizhi}
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pzwrap pz_copy">
+                                            <div class="PZXQ"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {PE.Label id="WAP媒体评分" gameId="@RequestInt_id" /}
+                <div class="gs_zp_box">
+                    <div class="gs_zp_box_con">
+                        <div class="gs_zp_remark_title">
+                            <div class="zp_title">玩家点评<a class="zp_more btnDetailMore" data-tar="1">+更多(0)</a></div>
+                        </div>
+                    </div>
+                    <div class="gs_zp_remark">
+                        <div class="remark_main">
+                            <div class="remark_top">
+                                <div class="game_score_wrap userrating" gameId="@RequestInt_id" style="display:none">
+                                    <div class="game_score">
+                                        <div class="num">0</div>
+                                        <div class="gs_zp_star_group"><i style="width:0"></i></div>
+                                        <div class="comm"><span>0</span>人评价</div>
+                                    </div>
+                                    <ul class="star_details" gameId="@RequestInt_id" style="display:none">
+                                        <li><div class="t1">5星</div><div class="star_progress"><i style="width:0"></i></div><div class="t2">0</div></li>
+                                        <li><div class="t1">4星</div><div class="star_progress"><i style="width:0"></i></div><div class="t2">0</div></li>
+                                        <li><div class="t1">3星</div><div class="star_progress"><i style="width:0"></i></div><div class="t2">0</div></li>
+                                        <li><div class="t1">2星</div><div class="star_progress"><i style="width:0"></i></div><div class="t2">0</div></li>
+                                        <li><div class="t1">1星</div><div class="star_progress"><i style="width:0"></i></div><div class="t2">0</div></li>
+                                    </ul>
+                                </div>
+                                <div class="game_score_loading"></div>
+                            </div>
+                            <div class="remark_compare" gameId="@RequestInt_id"></div>
+                            <div class="remark_floors" sid="@RequestInt_id" id="hotremark" data-pageSize="3" loadtype="0" data-type="1">
+                                <a class="gs_zp_btn_more btnDetailMore" data-tar="1">+更多</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gs_zp_box">
+                    <div class="gs_zp_box_con">
+                        <div class="gs_zp_gl" id="gszpglnews">
+                            <div class="zp_title">攻略<a target="_blank" href="#" class="zp_more btnDetailMore" data-tar="2">+更多</a></div>
+                            <ul class="gs_zp_list gs_zp_list_tw hide_time">
+                                {PE.Label id="内容带图片的信息列表关键字数据源" sourceId="topgl" bindStyle="新闻式" models="1" bindModel="1" outputQty="2" optionalCond="and UT.GameLib=@RequestInt_id" joinFieldMultipleValued="true" fieldName="ZFocus" fieldValue="专区八图"  nodes="11001,20824,20263,980,20809,21004,20895" specials="0" itemListOrderType="20" titleLength="48" /}
+                                {PE.Repeat id="topgl" vtl="true"}
+                                <li>
+                                    <a class="imgwrap" target="_self" href="${WapArticleUrl}"><img src="${DefaultPicUrl}" alt="${Title}"></a>
+                                    <a class="txtwrap ${WapTitleCss2}" target="_self" href="${WapArticleUrl}">
+                                        <span class="tit">${Title}</span>
+                                        <time>${UpdateTime}</time><span class="num hitcount" data-generalId="${ArticleID}">人气：0</span>
+                                    </a>
+                                </li>
+                                {/PE.Repeat}
+                            </ul>
+                            <ul class="gs_zp_list gs_zp_list_cw">
+                                {PE.Label id="内容带图片的信息列表关键字数据源" sourceId="gllist" bindStyle="新闻式" models="1" bindModel="1" outputQty="3" optionalCond="and UT.GameLib=@RequestInt_id"  nodes="11001,20824,20263,980,20809,21004,20895" specials="0" itemListOrderType="3" titleLength="48" /}
+                                {PE.Repeat id="gllist" vtl="true"}
+                                <li><a class="${WapTitleCss2}" target="_self" href="${WapArticleUrl}">${Title}</a></li>
+                                {/PE.Repeat}
+                                <a class="gs_zp_btn_more btnDetailMore" data-tar="2">+更多</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="gs_zp_box">
+                    <div class="gs_zp_box_con">
+                        <div class="gs_zp_new">
+                            <div class="zp_title">新闻<a data-tar="3" class="zp_more btnDetailMore">+更多</a></div>
+                            <ul class="gs_zp_list gs_zp_list_tw">
+                                {PE.Label id="内容带图片的信息列表关键字数据源" sourceId="news" bindStyle="新闻式" models="1" bindModel="1" outputQty="4"  optionalCond="and UT.GameLib=@RequestInt_id" nodes="11007,11009,20204" specials="0" itemListOrderType="3" titleLength="48" /}
+                                {PE.Repeat id="news" vtl="true"}
+                                <li>
+                                    <a class="imgwrap" target="_self" href="${WapArticleUrl}"><img src="${DefaultPicUrl}" alt="${Title}"></a>
+                                    <a class="txtwrap ${WapTitleCss2}" target="_self" href="${WapArticleUrl}">
+                                        <span class="tit">${Title}</span>
+                                        <time>${UpdateTime}</time><span class="num num_comm cy_comment" data-sid="${ArticleID}">0</span>
+                                    </a>
+                                </li>
+                                {/PE.Repeat}
+                                <a class="gs_zp_btn_more btnDetailMore" data-tar="3">+更多</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="gs_zp_box">
+                    <div class="gs_zp_box_con">
+                        <div class="gs_zp_gl">
+                            <div class="zp_title">游戏下载</div>
+                            <div class="gs_zp_list gs_zp_list_dn">
+                                <img class="gs_zp_list_dn_fm" src="{@cone.DefaultPicUrl}" alt="{@cone.Title}">
+                                <ul>
+                                    {PE.Label id="内容带图片的信息列表数据源" sourceId="xzlist" bindStyle="下载式" models="2" bindModel="2" outputQty="2" optionalCond="and UT.GameLib=@RequestInt_id"  nodes="62" specials="0" itemListOrderType="21" titleLength="48" /}
+                                    {PE.Repeat id="xzlist" vtl="true"}
+                                    <li><a target="_self" href="${WapArticleUrl}">${Title}</a></li>
+                                    {/PE.Repeat}
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                {PE.Label id="WAP游戏库_系列游戏_众评" itemId="@RequestInt_id" /}
+                <!--#include File="/autoinc/ja_nest/wap/wap.comm.bot.v1.htm"-->
+            </div>
+            <div class="gs_zp_item">
+                <div class="gs_zp_box">
+                    <div class="gs_zp_box_con">
+                        <div class="gs_zp_myscore">
+                            <div class="zp_title">我的点评</div>
+                            <a class="score_btn btnAddRemark addreview" gameId="@RequestInt_id">添加点评</a>
+                            <div class="gs_zp_myscore_top">
+                                <div class="head">
+                                    <img class="headpic" src="http://image.gamersky.com/webimg15/comment/anonymous.jpg" alt="head">
+                                    <span>登陆后点评</span>
+                                </div>
+                                <div class="clearfix gs_zp_star scorestar">
+                                    <a class="stars btnAddStarRemark" data-num="0"></a>
+                                    <a class="stars btnAddStarRemark" data-num="1"></a>
+                                    <a class="stars btnAddStarRemark" data-num="2"></a>
+                                    <a class="stars btnAddStarRemark" data-num="3"></a>
+                                    <a class="stars btnAddStarRemark" data-num="4"></a>
+                                </div>
+                            </div>
+                            <div class="gs_zp_myscore_comment mycomment"></div>
+                            <div class="gs_zp_myscore_bot" style="display:none"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gs_zp_box">
+                    <div class="gs_zp_box_con">
+                        <div class="gs_zp_remark_title">
+                            <div class="zp_title">玩家点评</div>
+                        </div>
+                    </div>
+                    <div class="gs_zp_remark">
+                        <div class="remark_main">
+                            <div class="remark_top">
+                                <div class="game_score_wrap userrating" gameId="@RequestInt_id" style="display:none">
+                                    <div class="game_score">
+                                        <div class="num">0</div>
+                                        <div class="gs_zp_star_group"><i style="width:0"></i></div>
+                                        <div class="comm"><span>0</span>人评价</div>
+                                    </div>
+                                    <ul class="star_details" gameId="@RequestInt_id" style="display:none">
+                                        <li><div class="t1">5星</div><div class="star_progress"><i style="width:0"></i></div><div class="t2">0</div></li>
+                                        <li><div class="t1">4星</div><div class="star_progress"><i style="width:0"></i></div><div class="t2">0</div></li>
+                                        <li><div class="t1">3星</div><div class="star_progress"><i style="width:0"></i></div><div class="t2">0</div></li>
+                                        <li><div class="t1">2星</div><div class="star_progress"><i style="width:0"></i></div><div class="t2">0</div></li>
+                                        <li><div class="t1">1星</div><div class="star_progress"><i style="width:0"></i></div><div class="t2">0</div></li>
+                                    </ul>
+                                </div>
+                                <div class="game_score_loading"></div>
+                            </div>
+                            <div class="remark_compare" gameId="@RequestInt_id"></div>
+                            <div class="remark_filter" id="remarkFilter" sid="@RequestInt_id" pageIndex="1" scrollpagination="true">
+                                <div class="remark_filter_sort">
+                                    <a class="cur" data-type="1">最热</a>
+                                    <a data-type="0">最新</a>
+                                </div>
+                                <div class="remark_filter_classify">
+                                    <a class="cly_show" loadtype="2">想玩</a>
+                                    <div class="cly_option">
+                                        <a loadtype="1">玩过</a>
+                                        <a loadtype="2">想玩</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="remark_floors">
+                                <a class="gs_zp_btn_more gs_zp_btn_more_loading">+更多</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gs_zp_item">
+                <div class="gs_zp_box">
+                    <div class="gs_zp_gl_swp" id="glAllMain">
+                        <div class="swp_nav">
+                            <a>攻略集</a>
+                            <a>全部攻略</a>
+                        </div>
+                        <div class="swp_con">
+                            <div class="swiper-container" id="glAllSwp">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div id="gsStrategyCollect">
+                                            {@cone.GlInc}
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        {PE.Label id="获取wap游戏热门标签" gameId="@RequestInt_id"  /}
+                                        <div class="gs_zp_box_con glnewslist">
+                                            <div class="gs_zp_gl_all">
+                                                <ul class="gs_zp_list gs_zp_list_tw hide_time">
+                                                    {PE.Label id="内容带图片的信息列表关键字数据源" sourceId="topgl2" bindStyle="新闻式" models="1" bindModel="1" outputQty="2" optionalCond="and UT.GameLib=@RequestInt_id" joinFieldMultipleValued="true" fieldName="ZFocus" fieldValue="专区八图"  nodes="11001,20824,20263,980,20809,21004,20895" specials="0" itemListOrderType="20" titleLength="48" /}
+                                                    {PE.Repeat id="topgl2" vtl="true"}
+                                                    <li>
+                                                        <a class="imgwrap" target="_self" href="${WapArticleUrl}"><img src="${DefaultPicUrl}" alt="${Title}"></a>
+                                                        <a class="txtwrap ${WapTitleCss2}" target="_self" href="${WapArticleUrl}">
+                                                            <span class="tit">${Title}</span>
+                                                            <time>${UpdateTime}</time><span class="num hitcount" data-generalId="${ArticleID}">人气：0</span>
+                                                        </a>
+                                                    </li>
+                                                    {/PE.Repeat}
+                                                </ul>
+                                                <ul class="gs_zp_list gs_zp_list_cw waplist">
+                                                    {PE.Label id="内容带图片的信息列表关键字数据源" sourceId="gllist2" bindStyle="新闻式" models="1" bindModel="1" outputQty="10" optionalCond="and UT.GameLib=@RequestInt_id"  nodes="11001,20824,20263,980,20809,21004,20895" specials="0" itemListOrderType="3" titleLength="48" /}
+                                                    {PE.Repeat id="gllist2" vtl="true"}
+                                                    <li><a class="${WapTitleCss2}" target="_self" href="${WapArticleUrl}">${Title}</a></li>
+                                                    {/PE.Repeat}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gs_zp_item">
+                <div class="gs_zp_box">
+                    <div class="gs_zp_box_con">
+                        <div class="gs_zp_new_all">
+                            <ul class="gs_zp_list gs_zp_list_tw waplist">
+                                {PE.Label id="内容带图片的信息列表关键字数据源" sourceId="newslist" bindStyle="新闻式" models="1" bindModel="1" outputQty="10" optionalCond="and UT.GameLib=@RequestInt_id" nodes="11007,11009,20204" specials="0" itemListOrderType="3" titleLength="48" /}
+                                {PE.Repeat id="newslist" vtl="true"}
+                                <li>
+                                    <a class="imgwrap" target="_self" href="${WapArticleUrl}"><img src="${DefaultPicUrl}" alt="${Title}"></a>
+                                    <a class="txtwrap ${WapTitleCss2} " target="_self" href="${WapArticleUrl}">
+                                        <span class="tit">${Title}</span>
+                                        <time>${UpdateTime}</time><span class="num num_comm cy_comment" data-sid="${ArticleID}">0</span>
+                                    </a>
+                                </li>
+                                {/PE.Repeat}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="pingtai" style="display:none">{PE.Field id="cone" fieldname="WjPingTai"/}</div>
+<!--#include File="/autoinc/abinc/new_wap_footer_t.htm"-->
+<a href="{@cone.ItemUrl}?tag=wap" class="ymw-btns ymw-btns-pc">
+    <!--#include File="/autoinc/abinc/new_wap_footer_b_ku.htm"-->
+    <script src="http://wap.gamersky.com/autoinc/allsite/allsite_nav_login_js.htm"></script>
+    <!--#include File="/autoinc/abinc/content_bottom.htm"-->
+</body>
+</html>

@@ -1,0 +1,250 @@
+$path:'http://image.gamersky.com/webimg13/wap/zq/';
+@mixin setIconBg($souceurl){
+    background: url(http://image.gamersky.com/webimg13/wap/zq/#{$souceurl}) 0 0 no-repeat;
+    background-size: 100%;
+}
+.gs-zq-html{
+    a{
+        user-select: none;
+    }
+}
+.gs-zq-title-lev1{
+    padding: 0 0.2rem;
+    border-top: 1px solid #ebebeb;
+    height: 0.78rem;
+    line-height: 0.78rem;
+    font-weight: bold;
+    font-size: 0.26rem;
+    .gs-more{
+        position: relative;
+        display: block;
+        float: right;
+        padding-right: 0.22rem;
+        font-size: 0.22rem;
+        color: #777;
+        font-weight: normal;
+        &:after{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -0.1rem;
+            display: block;
+            content: '';
+            width: 0.11rem;
+            height: 0.21rem;
+            @include setIconBg('gs-zq-more.png');
+        }
+    }
+}
+.gs-zq-gl-quick{
+    padding: 0 0.2rem 0.35rem;
+    a{
+        display: inline-block;
+        margin: 0 0.05rem 0.05rem 0;
+        padding: 0 0.3rem;
+        height: 0.66rem;
+        line-height: 0.66rem;
+        border: 0.02rem solid #cfe0f5;
+        font-size: 0.24rem;
+        color: #0167e8;
+        border-radius: 0.05rem;
+    }
+}
+.zq-strategy-collect{
+    padding-bottom: 0.4rem;
+    .gs_sc_tit{
+        display: none;
+    }
+    .gs-zq-gl-box-more{
+        margin: 0 auto;
+    }
+    .gs_sc_con{
+        .gs_sc_item{
+            margin-left: 0.2rem;
+            position: relative;
+            margin-bottom: 0.38rem;
+            padding: 0 0 0.2rem;
+            border-bottom: 1px solid #ebebeb;
+            &:nth-last-of-type(1){
+                margin-bottom: 0;
+                border-bottom: none;
+            }
+            .gs_sc_item_btn{
+                display: block;
+                height: 0.48rem;
+                line-height: 0.48rem;
+                font-size: 0.24rem;
+                color: #0167e8;
+            }
+            .gs_sc_item_open{
+                .gs_sc_item_list{
+                    @extend %clearfix;
+                    li{
+                        float: left;
+                        width: 3.6rem;
+                        a{
+                            display: block;
+                            padding-left: 0.2rem;
+                            padding-right: 0.4rem;
+                            width: 3.0rem;
+                            height: 0.77rem;
+                            line-height: 0.77rem;
+                            border-top: 1px solid #ebebeb;
+                            font-size: 0.24rem;
+                            color: #222;
+                            @include setIconBg('gs-zq-more.png');
+                            background-size: 0.11rem;
+                            background-position: 3.29rem center;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        &:nth-child(even){
+                            width: 3.4rem;
+                            a{
+                                padding-left: 0;
+                                width: 3.0rem;
+                                border-right: 1px solid #ebebeb;
+                                background-position: 3.0rem center;
+                            }
+                        }
+                        &:nth-child(2),&:nth-child(3){
+                            a{
+                                border-top: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .gs_sc_item_more{
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding-right: 0.4rem;
+                height: 0.48rem;
+                line-height: 0.48rem;
+                font-size: 0.22rem;
+                color: #777;
+                i{
+                    display: block;
+                    position: absolute;
+                    right: 0.2rem;
+                    top: 50%;
+                    margin-top: -0.12rem;
+                    width: 0.11rem;
+                    height: 0.21rem;
+                    @include setIconBg('gs-zq-more.png');
+                }
+            }
+        }
+    }
+}
+.gs-zq-more{
+    margin: 0 auto;
+    width: 1.8rem;
+    height: 0.5rem;
+    background-color: #f5f5f5;
+    border-radius: 0.1rem;
+    font-size: 0.24rem;
+    color: #f01a21;
+    @include flexbox;
+    @include ConCen;
+    &:before,&:after{
+        display: block;
+        content: '';
+    }
+    &:before{
+        margin-right: 0.05rem;
+        width: 0.19rem;
+        height: 0.19rem;
+        @include setIconBg('gs-zq-plus.png');
+    }
+    &:after{
+        display: none;
+        margin-left: 0.08rem;
+        width: 0.18rem;
+        height: 0.17rem;
+        @include setIconBg('gs-zq-arr.png');
+    }
+    &.gs-zq-more-all{
+        &:before{
+            display: none;
+        }
+        &:after{
+            display: block;
+        }
+    }
+    &.gs-zq-more-done{
+        &:before,&:after{
+            display: none;
+        }
+    }
+    &.gs-zq-more-blue{
+        color: #0167e8;
+        &:before{
+            @include setIconBg('gs-zq-plus-blue.png');
+        }
+    }
+}
+.gs-zq-loading{
+    margin: 0.2rem auto;
+    width: 0.48rem;
+    height: 0.48rem;
+    background:url(http://image.gamersky.com/webimg15/loading.gif) 0 0 no-repeat;
+    background-size: 100%;
+}
+.gs-zp-rating{
+    position: relative;
+    width: 1.27rem;
+    height: 0.83rem;
+    .gs-zp-rating-num{
+        position: relative;
+        width: 1.27rem;
+        height: 0.48rem;
+        @include flexbox;
+        align-items:flex-end;
+        .dot{
+            display: block;
+            margin: 0 0.08rem;
+            width: 0.09rem;
+            height: 0.09rem;
+            border-radius: 50%;
+            background-color: #f01a21;
+        }
+        .pnm{
+            display: block;
+            width: 0.32rem;
+            height: 0.48rem;
+            @include setIconBg('gs-zq-score.png');
+            background-size: 4rem 0.48rem;
+            @for $i from 9 through 0 {
+                &.pnm#{$i}{
+                    background-position: -#{0.38rem*(9 - $i)} 0;
+                }                
+            }
+        }
+        &.gs-zp-rating-num-full{
+            padding-left: 0.04rem;
+            .pnm{
+                margin-right: 0.08rem;
+            }
+        }
+    }
+    .gs-zp-rating-tit{
+        padding-left: 0.1rem;
+        height: 0.35rem;
+        line-height: 0.35rem;
+        font-size: 0.18rem;
+        color: #888;
+    }
+    .gs-zp-rating-arr{
+        position: absolute;
+        right: 0;
+        top: 0.24rem;
+        display: block;
+        width: 0.11rem;
+        height: 0.21rem;
+        @include setIconBg('gs-zp-rating-arr.png');
+    }
+}

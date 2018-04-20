@@ -1,0 +1,167 @@
+.zq-strategy-collect .gs_sc_con .gs_sc_item .gs_sc_item_open .gs_sc_item_list:after,.zq-strategy-collect .gs_sc_con .gs_sc_item .gs_sc_item_open .gs_sc_item_list:before{display:table;content:" "}
+.zq-strategy-collect .gs_sc_con .gs_sc_item .gs_sc_item_open .gs_sc_item_list:after{clear:both}
+.gs-zq-html a{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.gs-zq-title-lev1{padding:0 .2rem;border-top:1px solid #ebebeb;height:.78rem;line-height:.78rem;font-weight:700;font-size:.26rem}
+.gs-zq-title-lev1 .gs-more{position:relative;display:block;float:right;padding-right:.22rem;font-size:.22rem;color:#777;font-weight:400}
+.gs-zq-title-lev1 .gs-more:after{position:absolute;right:0;top:50%;margin-top:-.1rem;display:block;content:'';width:.11rem;height:.21rem;background:url(http://image.gamersky.com/webimg13/wap/zq/gs-zq-more.png) 0 0 no-repeat;background-size:100%}
+.gs-zq-gl-quick{padding:0 .2rem .35rem}
+.gs-zq-gl-quick a{display:inline-block;margin:0 .05rem .05rem 0;padding:0 .3rem;height:.66rem;line-height:.66rem;border:.02rem solid #cfe0f5;font-size:.24rem;color:#0167e8;border-radius:.05rem}
+.zq-strategy-collect{padding-bottom:.4rem}
+.zq-strategy-collect .gs_sc_tit{display:none}
+.zq-strategy-collect .gs-zq-gl-box-more{margin:0 auto}
+.zq-strategy-collect .gs_sc_con .gs_sc_item{margin-left:.2rem;position:relative;margin-bottom:.38rem;padding:0 0 .2rem;border-bottom:1px solid #ebebeb}
+.zq-strategy-collect .gs_sc_con .gs_sc_item:nth-last-of-type(1){margin-bottom:0;border-bottom:none}
+.zq-strategy-collect .gs_sc_con .gs_sc_item .gs_sc_item_btn{display:block;height:.48rem;line-height:.48rem;font-size:.24rem;color:#0167e8}
+.zq-strategy-collect .gs_sc_con .gs_sc_item .gs_sc_item_open .gs_sc_item_list li{float:left;width:3.6rem}
+.zq-strategy-collect .gs_sc_con .gs_sc_item .gs_sc_item_open .gs_sc_item_list li a{display:block;padding-left:.2rem;padding-right:.4rem;width:3rem;height:.77rem;line-height:.77rem;border-top:1px solid #ebebeb;font-size:.24rem;color:#222;background:url(http://image.gamersky.com/webimg13/wap/zq/gs-zq-more.png) 0 0 no-repeat;background-size:100%;background-size:.11rem;background-position:3.29rem center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.zq-strategy-collect .gs_sc_con .gs_sc_item .gs_sc_item_open .gs_sc_item_list li:nth-child(even){width:3.4rem}
+.zq-strategy-collect .gs_sc_con .gs_sc_item .gs_sc_item_open .gs_sc_item_list li:nth-child(even) a{padding-left:0;width:3rem;border-right:1px solid #ebebeb;background-position:3rem center}
+.zq-strategy-collect .gs_sc_con .gs_sc_item .gs_sc_item_open .gs_sc_item_list li:nth-child(2) a,.zq-strategy-collect .gs_sc_con .gs_sc_item .gs_sc_item_open .gs_sc_item_list li:nth-child(3) a{border-top:none}
+.zq-strategy-collect .gs_sc_con .gs_sc_item .gs_sc_item_more{display:block;position:absolute;right:0;top:0;padding-right:.4rem;height:.48rem;line-height:.48rem;font-size:.22rem;color:#777}
+.zq-strategy-collect .gs_sc_con .gs_sc_item .gs_sc_item_more i{display:block;position:absolute;right:.2rem;top:50%;margin-top:-.12rem;width:.11rem;height:.21rem;background:url(http://image.gamersky.com/webimg13/wap/zq/gs-zq-more.png) 0 0 no-repeat;background-size:100%}
+.gs-zq-more{margin:0 auto;width:1.8rem;height:.5rem;background-color:#f5f5f5;border-radius:.1rem;font-size:.24rem;color:#f01a21;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-box-align:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
+.gs-zq-more:after,.gs-zq-more:before{display:block;content:''}
+.gs-zq-more:before{margin-right:.05rem;width:.19rem;height:.19rem;background:url(http://image.gamersky.com/webimg13/wap/zq/gs-zq-plus.png) 0 0 no-repeat;background-size:100%}
+.gs-zq-more:after{display:none;margin-left:.08rem;width:.18rem;height:.17rem;background:url(http://image.gamersky.com/webimg13/wap/zq/gs-zq-arr.png) 0 0 no-repeat;background-size:100%}
+.gs-zq-more.gs-zq-more-all:before{display:none}
+.gs-zq-more.gs-zq-more-all:after{display:block}
+.gs-zq-more.gs-zq-more-done:after,.gs-zq-more.gs-zq-more-done:before{display:none}
+.gs-zq-more.gs-zq-more-blue{color:#0167e8}
+.gs-zq-more.gs-zq-more-blue:before{background:url(http://image.gamersky.com/webimg13/wap/zq/gs-zq-plus-blue.png) 0 0 no-repeat;background-size:100%}
+.gs-zq-loading{margin:.2rem auto;width:.48rem;height:.48rem;background:url(http://image.gamersky.com/webimg15/loading.gif) 0 0 no-repeat;background-size:100%}
+.gs-zp-rating{position:relative;width:1.27rem;height:.83rem}
+.gs-zp-rating .gs-zp-rating-num{position:relative;width:1.27rem;height:.48rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}
+.gs-zp-rating .gs-zp-rating-num .dot{display:block;margin:0 .08rem;width:.09rem;height:.09rem;border-radius:50%;background-color:#f01a21}
+.gs-zp-rating .gs-zp-rating-num .pnm{display:block;width:.32rem;height:.48rem;background:url(http://image.gamersky.com/webimg13/wap/zq/gs-zq-score.png) 0 0 no-repeat;background-size:100%;background-size:4rem .48rem}
+.gs-zp-rating .gs-zp-rating-num .pnm.pnm9{background-position:0 0}
+.gs-zp-rating .gs-zp-rating-num .pnm.pnm8{background-position:-.38rem 0}
+.gs-zp-rating .gs-zp-rating-num .pnm.pnm7{background-position:-.76rem 0}
+.gs-zp-rating .gs-zp-rating-num .pnm.pnm6{background-position:-1.14rem 0}
+.gs-zp-rating .gs-zp-rating-num .pnm.pnm5{background-position:-1.52rem 0}
+.gs-zp-rating .gs-zp-rating-num .pnm.pnm4{background-position:-1.9rem 0}
+.gs-zp-rating .gs-zp-rating-num .pnm.pnm3{background-position:-2.28rem 0}
+.gs-zp-rating .gs-zp-rating-num .pnm.pnm2{background-position:-2.66rem 0}
+.gs-zp-rating .gs-zp-rating-num .pnm.pnm1{background-position:-3.04rem 0}
+.gs-zp-rating .gs-zp-rating-num .pnm.pnm0{background-position:-3.42rem 0}
+.gs-zp-rating .gs-zp-rating-num.gs-zp-rating-num-full{padding-left:.04rem}
+.gs-zp-rating .gs-zp-rating-num.gs-zp-rating-num-full .pnm{margin-right:.08rem}
+.gs-zp-rating .gs-zp-rating-tit{padding-left:.1rem;height:.35rem;line-height:.35rem;font-size:.18rem;color:#888}
+.gs-zp-rating .gs-zp-rating-arr{position:absolute;right:0;top:.24rem;display:block;width:.11rem;height:.21rem;background:url(http://image.gamersky.com/webimg13/wap/zq/gs-zp-rating-arr.png) 0 0 no-repeat;background-size:100%}
+.gs-zq-config .gs_zp_pz_swp .swp_nav a,.gs-zq-hng-nav .gs-zq-nav-box a,.gs-zq-nav .gs-zq-nav-box a{position:relative;-webkit-transition:all .25s ease;transition:all .25s ease;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;font-weight:700}
+.gs-zq-config .gs_zp_pz_swp .swp_nav a:after,.gs-zq-hng-nav .gs-zq-nav-box a:after,.gs-zq-nav .gs-zq-nav-box a:after{display:block;content:'';position:absolute;bottom:0;left:50%;margin-left:-.25rem;width:.5rem;height:.04rem;background-color:#f01a21;border-radius:.4rem .4rem 0 0;-webkit-transition:all .25s ease;transition:all .25s ease;opacity:0;-webkit-transform:translate(0,.04rem);transform:translate(0,.04rem)}
+.gs-zq-config .gs_zp_pz_swp .swp_nav a.cur:after,.gs-zq-hng-nav .gs-zq-nav-box a.cur:after,.gs-zq-nav .gs-zq-nav-box a.cur:after{opacity:1;-webkit-transform:translate(0,0);transform:translate(0,0)}
+.gs-zq-nav-placeholder{height:.67rem}
+.gs-zq-nav{height:.67rem;background-color:#fff;-webkit-box-sizing:border-box;box-sizing:border-box}
+.gs-zq-nav.cur{position:fixed;left:0;top:0;width:100%;z-index:10;-webkit-transition:all .25s ease;transition:all .25s ease;background-color:#fff;-webkit-box-shadow:0 10px 10px rgba(0,0,0,.1);box-shadow:0 10px 10px rgba(0,0,0,.1)}
+.gs-zq-nav .gs-zq-nav-box{margin:0 auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;width:6.3rem}
+.gs-zq-nav .gs-zq-nav-box a{height:.67rem;font-size:.26rem;color:#777}
+.gs-zq-nav .gs-zq-nav-box a.hide{display:none}
+.gs-zq-nav .gs-zq-nav-box a.cur{color:#222}
+.gs-zq-hng-nav{height:.74rem}
+.gs-zq-hng-nav .gs-zq-nav-box{margin:0 auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;width:5.45rem}
+.gs-zq-hng-nav .gs-zq-nav-box a{display:block;height:.74rem;line-height:.74rem;font-size:.26rem;color:#222}
+.gs-zq-hng-nav .gs-zq-nav-box a.cur{color:#f01a21}
+.gs-zq-swp{height:2.7rem}
+.gs-zq-swp .swiper-container{height:2.7rem}
+.gs-zq-swp .swiper-container .swiper-slide{position:relative;margin-right:.04rem;width:3.2rem;height:2.7rem}
+.gs-zq-swp .swiper-container .swiper-slide:nth-child(1){margin-left:.2rem}
+.gs-zq-swp .swiper-container .swiper-slide:last-child{margin-right:0}
+.gs-zq-swp .swiper-container .swiper-slide img{display:block;margin-bottom:.18rem;width:3.2rem;height:1.8rem}
+.gs-zq-swp .swiper-container .swiper-slide span{display:block;padding:0 .18rem;max-height:.72rem;line-height:.36rem;font-size:.24rem;color:#222;overflow:hidden}
+.gs-zq-swp .swiper-container .swiper-slide a{position:relative;display:block;width:100%;height:100%}
+.gs-zq-swp-video .swiper-container .swiper-slide a:after{display:block;content:'';position:absolute;left:50%;margin-left:-.33rem;top:.58rem;width:.66rem;height:.66rem;background:url(http://image.gamersky.com/webimg13/wap/zq//gs-zq-play.png) 0 0 no-repeat;background-size:100%}
+.pswp-zq.pswp--css_animation .pswp__preloader__icn{top:.3rem;left:.3rem;width:.28rem;height:.28rem}
+.pswp-zq.pswp--css_animation .pswp__preloader__cut{width:.14rem;height:.28rem}
+.pswp-zq.pswp--css_animation .pswp__preloader__donut{width:.28rem;height:.28rem;border:.04rem solid #fff;border-left-color:transparent;border-bottom-color:transparent}
+.pswp-zq .pswp__button,.pswp-zq .pswp__button--arrow--left:before,.pswp-zq .pswp__button--arrow--right:before{background-image:url(http://image.gamersky.com/webimg13/lib/photoswipe/default-skin.svg);background-size:5.28rem 1.76rem;width:.88rem;height:.88rem}
+.pswp-zq .pswp__button--arrow--left:before,.pswp-zq .pswp__button--arrow--right:before{top:0;height:.6rem;width:.64rem}
+.pswp-zq .pswp__button--arrow--left,.pswp-zq .pswp__button--arrow--right{margin-top:-.3rem;height:.6rem;width:.7rem;background:0 0}
+.pswp-zq .pswp__button--arrow--left:before{left:.06rem;background-position:-2.76rem -.88rem}
+.pswp-zq .pswp__button--arrow--right:before{right:.06rem;background-position:-1.88rem -.88rem}
+.pswp-zq .pswp__button--close{background-position:0 -.88rem}
+.pswp-zq .pswp__preloader{width:.88rem;height:.88rem}
+.pswp-zq .pswp__top-bar{height:.88rem}
+.pswp-zq .pswp__counter{padding:0;width:100%;height:.88rem;line-height:.88rem;font-size:.26rem;text-align:center}
+.pswp-zq .pswp__bot-bar{position:absolute;left:0;bottom:0;width:100%;height:.88rem;background-color:rgba(0,0,0,.3)}
+.pswp-zq .pswp__bot-bar .pswp-zq-save-btn{display:block;position:absolute;right:.25rem;bottom:.19rem;width:.5rem;height:.5rem;background:url(http://image.gamersky.com/webimg13/wap/zq/gs-zq-download.png) 0 0 no-repeat;background-size:100%;background-size:.19rem .22rem;background-position:center center;border:1px solid #555;-webkit-box-sizing:border-box;box-sizing:border-box;border-radius:.1rem}
+.pswp-zq .pswp__bot-bar .pswp-zq-origin-btn{cursor:pointer;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-box-align:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;position:absolute;left:50%;margin-left:-.6rem;bottom:.19rem;width:1.4rem;height:.5rem;background:0 0;background-color:#222;font-size:.26rem;color:#999;border:1px solid #555;-webkit-box-sizing:border-box;box-sizing:border-box;border-radius:.1rem}
+.gs-zq-list-txt ul{padding-left:.2rem}
+.gs-zq-list-txt ul li{border-top:.01rem solid #ebebeb;height:.77rem;line-height:.77rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gs-zq-list-txt ul li a{font-size:.24rem;color:#222}
+.gs-zq-list-txt ul li a b{margin-right:.1rem}
+.gs-zq-list-download ul{padding:0 .2rem}
+.gs-zq-list-download ul li{margin-bottom:.05rem;height:.72rem;line-height:.72rem;background-color:#f5f5f5}
+.gs-zq-list-download ul li a{position:relative;display:block;padding:0 .6rem 0 .15rem;height:.72rem}
+.gs-zq-list-download ul li a span{display:block;height:.72rem;line-height:.72rem;font-size:.24rem;color:#222;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.gs-zq-list-download ul li a:after{position:absolute;right:.27rem;top:50%;margin-top:-.11rem;display:block;content:'';width:.19rem;height:.22rem;background:url(http://image.gamersky.com/webimg13/wap/zq/gs-zq-download.png) 0 0 no-repeat;background-size:100%}
+.gs-zq-list-pictxt ul{padding:0 .2rem}
+.gs-zq-list-pictxt ul li{padding:.25rem 0}
+.gs-zq-list-pictxt ul li:first-child{padding-top:0}
+.gs-zq-list-pictxt ul li a{position:relative;display:block;height:1.4rem;overflow:hidden}
+.gs-zq-list-pictxt ul li a img{display:block;width:2.5rem;height:1.4rem}
+.gs-zq-list-pictxt ul li a .tit{display:block;position:absolute;top:-.1rem;left:2.8rem;width:3.8rem;height:1rem;line-height:.5rem;font-size:.26rem;color:#222;overflow:hidden}
+.gs-zq-list-pictxt ul li a .other{position:absolute;left:2.8rem;bottom:0;height:.24rem;line-height:.24rem;color:#888;font-size:.2rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.gs-zq-list-pictxt ul li a .other time{display:block;width:1.33rem}
+.gs-zq-list-pictxt ul li a .other i{display:block;padding-left:.32rem;font-style:normal;background:url(http://image.gamersky.com/webimg13/wap/zq/gs-zq-comm.png) 0 0 no-repeat;background-size:100%;background-size:.25rem .22rem;background-position:0 .02rem}
+.gs-zq-game-info{position:relative;padding:0 0 .2rem;min-height:2.5rem;overflow:hidden;background-color:#eee}
+.gs-zq-game-info .bg{display:block;position:absolute;left:0;top:50%;width:100%;-webkit-filter:blur(3px);filter:blur(3px);opacity:.1;-webkit-transform:translate(0,-50%);transform:translate(0,-50%)}
+.gs-zq-game-info .fm{display:block;position:absolute;left:.2rem;top:.37rem;width:1.21rem;height:1.7rem;background-color:#333;-webkit-box-shadow:.15rem .15rem .25rem rgba(52,10,11,.25);box-shadow:.15rem .15rem .25rem rgba(52,10,11,.25)}
+.gs-zq-game-info .context{position:relative;margin-left:1.65rem;padding-top:.36rem;width:5.35rem}
+.gs-zq-game-info .context .gs-zp-rating{position:absolute;top:.36rem;right:0}
+.gs-zq-game-info .context .title{margin-bottom:.2rem;width:3.9rem}
+.gs-zq-game-info .context .title h4{margin-bottom:.08rem;line-height:.34rem;font-size:.3rem;color:#222}
+.gs-zq-game-info .context .title h5{line-height:.28rem;font-size:.22rem;color:#888}
+.gs-zq-game-info .context .info{padding-top:.15rem;border-top:1px solid rgba(170,170,170,.3)}
+.gs-zq-game-info .context .info .time{margin-top:-.1rem}
+.gs-zq-game-info .context .info .time p{display:none}
+.gs-zq-game-info .context .info .time p.cur{display:block}
+.gs-zq-game-info .context .info p{margin-bottom:.1rem;line-height:.3rem;font-size:.22rem;color:#222;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap}
+.gs-zq-game-info .context .info p a{display:block;margin-bottom:.1rem;margin-right:.15rem;padding:0 .14rem;height:.3rem;line-height:.3rem;border:1px solid #aaa;-webkit-box-sizing:border-box;box-sizing:border-box;border-radius:.06rem}
+.gs-zq-game-info .context .info p a.cur{color:#fff;background-color:#333;border-color:#333}
+.gs-zq-game-info .introduce{margin-top:.3rem;position:relative;padding:0 .2rem}
+.gs-zq-game-info .introduce .introduce-more{display:block;position:absolute;right:.2rem;top:0;line-height:.32rem;font-size:.22rem;color:#333}
+.gs-zq-game-info .introduce p{padding-right:.75rem;line-height:.32rem;font-size:.22rem;color:#777;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.gs-zq-game-info .introduce.cur .introduce-more{display:none}
+.gs-zq-game-info .introduce.cur p{padding-right:0;white-space:normal;overflow:auto;text-overflow:initial}
+.gs-zq-hng{padding:.15rem 0 .4rem;background-color:#fff}
+.gs-zq-hng .gs-zq-hng-item{display:none;padding-top:.04rem}
+.gs-zq-hng .gs-zq-hng-item .gs-zq-swp{margin-bottom:.42rem}
+.gs-zq-hng .gs-zq-hng-item .gs-zq-list{margin-bottom:.2rem}
+.gs-zq-hng .gs-zq-hng-item.cur{display:block}
+.gs-zq-gl{background-color:#fff}
+.gs-zq-article-pc{padding-bottom:.25rem;background-color:#fff}
+.gs-zq-video{padding-bottom:.4rem;background-color:#fff}
+.gs-zq-images{padding-bottom:.4rem;background-color:#fff}
+.gs-zq-images .gs-zq-swp{height:1.8rem}
+.gs-zq-images .gs-zq-swp .swiper-container{height:1.8rem}
+.gs-zq-images .gs-zq-swp .swiper-container .swiper-slide{height:1.8rem}
+.gs-zq-images .gs-zq-swp .swiper-container .swiper-slide img{margin-bottom:0}
+.gs-zq-label-wrap{display:none}
+.gs-zq-download{padding-bottom:.55rem;background-color:#fff}
+.gs-zq-config{padding-bottom:.6rem;border-top:1px solid #ebebeb;background-color:#fff}
+.gs-zq-config .gs_zp_pz_swp .swp_nav{margin-bottom:.05rem;padding-top:.1rem;height:.64rem}
+.gs-zq-config .gs_zp_pz_swp .swp_nav a{margin-right:.88rem;height:.6rem;line-height:.6rem;font-size:.26rem;color:#333}
+.gs-zq-config .gs_zp_pz_swp .swp_nav a.cur{color:#f01a21}
+.gs-zq-config .gs_zp_pz_swp .swp_con .swiper-container .swiper-slide .pzwrap{margin:0 .2rem;padding:.1rem .28rem;background-color:#f5f9ff;border-radius:.05rem}
+.gs-zq-config .gs_zp_pz_swp .swp_con .swiper-container .swiper-slide .pzwrap .PZXQ .PZ li{height:auto;line-height:normal;border-bottom:none}
+.gs-zq-config .gs_zp_pz_swp .swp_con .swiper-container .swiper-slide .pzwrap .PZXQ .PZ li .tit{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;height:100%;line-height:normal;min-height:.5rem}
+.gs-zq-config .gs_zp_pz_swp .swp_con .swiper-container .swiper-slide .pzwrap .PZXQ .PZ li .txt{min-height:.5rem;height:auto}
+.gs-zq-config .gs_zp_pz_swp .swp_con .swiper-container .swiper-slide .pzwrap .PZXQ .PZ li .txt span{max-height:none;line-height:.25rem}
+.gs-zq-ku-comm{background-color:#fff}
+.gs-zq-club{border-top:1px solid #ebebeb}
+.gs-zq-club .qzOuter{padding-top:0}
+.gs-zq-lp{background-color:#fff;padding-top:.2rem}
+.gs-zq-lp .gs-zq-nav .gs-zq-nav-box a{font-weight:700}
+.gs-zq-lp .gs-zq-list-pictxt ul li{border-top:1px solid #ebebeb}
+.gs-zq-lp .gs-zq-list-pictxt ul li:first-child{border-top:none}
+.gs-zq-lp-news{padding-bottom:.5rem}
+.gs-zq-lp-news .gs-zq-list{padding-top:.25rem}
+.gs-zq-lp-news .gzls-rmd-more{margin:.25rem auto 0}
+.gs-zq-lp-download{padding-bottom:.5rem}
+.gs-zq-lp-download .gs-zq-list-txt ul li:first-child{border-top:none}
+.gs-zq-lp-download .gs-zq-list-txt ul li a b{display:none}
+.gs-zq-lp-download .gzls-rmd-more{margin:.25rem auto 0}
+.gs-zq-lp-strategy .gs-zq-list-txt ul li a b{display:none}
+.gs-zq-lp-strategy .gzls-rmd{padding-bottom:.55rem}
+.gs-zq-lp-strategy .gzls-rmd .gzls-rmd-title{padding-left:.2rem;height:.8rem;line-height:.8rem;font-size:.26rem;color:#333}
+.gs-zq-lp-strategy .gzls-rmd .gzls-rmd-more{margin:.25rem auto 0}

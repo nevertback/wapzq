@@ -1,0 +1,52 @@
+%clearfix{
+	&:before,&:after{display: table;content: " ";}
+	&:after{clear: both;}
+}
+@mixin chuizhi(){
+	position: absolute;top: 50%;
+	transform:translate3d(0,-50%,0);
+}
+//flex
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+@mixin justifyCon(){
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+//完全居中
+@mixin ConCen(){
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+//水平居中
+@mixin ConCenH(){
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+//垂直居中
+@mixin ConCenV(){	
+	-webkit-box-align: center;
+	box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -webkit-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -webkit-order: $val;  
+  order: $val;
+}
