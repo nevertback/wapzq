@@ -1,0 +1,177 @@
+{PE.DataSource id="cone" datasource="专区_内容页" itemId="@RequestInt_id" xslt="true" /}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="{PE.Field id="cone" fieldname="CSSNews"/}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{PE.Field id="cone" fieldname="GamerSearch"/}攻略秘籍专题_{PE.Field id="cone" fieldname="GamerSearch"/}攻略大全 | 图文视频攻略 _ 游民星空 Gamersky.com</title>
+    <meta name="keywords" content="{PE.Field id="cone" fieldname="GamerSearch" /}攻略,{PE.Field id="cone" fieldname="GamerSearch"/}秘籍,{PE.Field id="cone" fieldname="GamerSearch"/}图文攻略,{PE.Field id="cone" fieldname="GamerSearch"/}视频攻略" />
+    <!--#include File="/autoinc/abinc/zq_list_head.htm"-->
+    {PE.Field id="cone" fieldname="gongluezhuantiidWAPURL"/}
+    <script src="//j.gamersky.com/g/mobileesp.js"></script>
+</head>
+<body>
+<script src="https://www.gamersky.com/autoinc/allsite/allsite_nav_js.htm"></script>
+<div class="center">
+    <div class="Top">
+        <div class="toppic">{PE.Label id="专区方案六_TOP图片模块" itemId="@RequestInt_id" /}</div>
+        <div class="topnav">
+            <div class="nav1">
+                <ul class="nav">
+                    {PE.Label id="新_专区方案六_顶部导航" itemId="@RequestInt_id" ZGameDir="{PE.Field id="cone" fieldname="ZGameDir"/}"/}
+                </ul>
+                <div class="Search" id="search-form">
+                    <div class="radio">
+                        <div class="txt">搜百度</div>
+                        <div class="con">
+                            <a href="javascript:;">搜百度</a>
+                            <a href="javascript:;">搜本站</a>
+                        </div>
+                    </div>
+                    <div class="form block" data-action="http://soso.gamersky.com/cse/search?s=3068275339727451251">
+                        <input class="Sinput" type="text" name="q" value="输入搜索信息" onfocus="if(value=='输入搜索信息')value='';this.onblur=function(){if(value=='')value='输入搜索信息'}"/>
+                        <input class="Sbutton" type="button" value="搜百度"/>
+                    </div>
+                    <div class="form none" data-action="http://so.gamersky.com/">
+                        <input class="Sinput" type="text" name="s" value="输入搜索信息" onfocus="if(value=='输入搜索信息')value='';this.onblur=function(){if(value=='')value='输入搜索信息'}"/>
+                        <input class="Sbutton" type="button" value="搜本站"/>
+                    </div>
+                </div><!--Search end-->
+            </div><!--nav1 end-->
+            {PE.Label id="专区方案六_专区副导航" itemId="@RequestInt_id"/}
+        </div><!--topnav end-->
+    </div><!--Top end-->
+
+    <div class="Mid">
+        <div class="Mid_top">
+            <div class="Mid_ad">
+                <!--#include File="/autoinc/abinc/ja/zq_top_970_1.htm"-->
+            </div>
+
+            <div class="Mid1">
+                <div class="img"><a href="" target="_blank"><img src="//image.gamersky.com/zqimg/{PE.Field id="cone" fieldname="ZGameDir"/}/image/cover.jpg" width="65" height="92" /></a></div>
+                <div class="tit"><span class="tt">{PE.Field id="cone" fieldname="GamerSearch"/}攻略专题</span>|<a class="tougao" href="http://www.gamersky.com/zhuanti/tougao/" target="_blank">我要投稿</a></div>
+                <div class="nav">
+                    <a href="javascript:;" class="cur">攻略专题</a>
+                    <a href="http://www.gamersky.com/z/{PE.Field id="cone" fieldname="ZGameDir"/}/{PE.Field id="cone" fieldname="GameLib"/}_28327/" target="_blank">流程攻略</a>
+                    <a href="http://www.gamersky.com/z/{PE.Field id="cone" fieldname="ZGameDir"/}/{PE.Field id="cone" fieldname="GameLib"/}_34425/" target="_blank">问题解决</a>
+                    <a href="http://www.gamersky.com/z/{PE.Field id="cone" fieldname="ZGameDir"/}/{PE.Field id="cone" fieldname="GameLib"/}_32615/" target="_blank">游戏资料</a>
+                    <a href="http://www.gamersky.com/z/{PE.Field id="cone" fieldname="ZGameDir"/}/{PE.Field id="cone" fieldname="GameLib"/}_35407/" target="_blank">游戏秘籍</a>
+                    <a href="http://www.gamersky.com/z/{PE.Field id="cone" fieldname="ZGameDir"/}/{PE.Field id="cone" fieldname="GameLib"/}_28330/" target="_blank">上手体验</a>
+                    <a href="http://www.gamersky.com/z/{PE.Field id="cone" fieldname="ZGameDir"/}/{PE.Field id="cone" fieldname="GameLib"/}_34496/" target="_blank">成就/奖杯</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="Midcon">
+            <div class="MidLtit bgempty"><div class="tit">精品攻略推荐</div><div class="nav"></div></div>
+            <ul class="piclist block">
+                {PE.Label id="内容带图片的信息列表数据源" sourceId="patch" bindStyle="新闻式" titleLength="70" nodes="11001" outputQty="50" specials="{PE.Field id="cone" fieldname="gongluezhuantiid"/}" itemListOrderType="3" linkOpenType="1" models="1" bindModel="1" displayDateTime="yyyy-mm-dd" imageWidth="185" imageHeight="104" imageClass="pic1" eliteLevel="1" /}
+                {PE.Repeat id="patch" }
+                <li class="img"><a href="{$ArticleUrl}" target="_blank">{$ArticlePic}<br/>{$TitleCss}</a></li>
+                {PE.RMod mod="10"}
+            </ul>
+            <ul class="piclist none">
+                {/PE.RMod}
+                {/PE.Repeat}
+            </ul>
+        </div>
+
+        <div class="Mid_L">
+            {PE.Label id="专区攻略编辑推荐-V4" itemid="{PE.Field id="cone" fieldname="ID"/}"/}
+
+            <div class="MidLtit"><div class="tit">最近更新</div><div class="more"></div></div>
+            <div class="loadpic none"><span class="img"></span><span class="txt">正在加载...</span></div>
+            <ul class="downlist titlist" data-templatekey="glztxin" scrolltop="400"  data-ganeralid="{PE.Field id="cone" fieldname="GeneralID" /}">
+            {PE.Label id="内容带图片的信息列表数据源" sourceId="update" bindStyle="新闻式" usePage="true" titleLength="70" nodes="11001" outputQty="63" specials="{PE.Field id="cone" fieldname="gongluezhuantiid"/}" itemListOrderType="3" linkOpenType="1" models="1" bindModel="1"  displayDateTime="yyyy-mm-dd"  /}
+            {PE.Repeat id="update" vtl="true"}
+            <li class="li1"><div class="tit">${ClassAbbrName} | <a target="_blank" href="${ArticleUrl}" title="${Title}">${TitleCss}</a></div><div class="time">${UpdateTime}</div></li>
+            {/PE.Repeat}
+            </ul>
+            <div class="Page contentpage" data-pageclass="downlist">
+                {PE.Page id="列表分页V4" datasource="update" /}
+            </div>
+        </div><!--Mid_L end-->
+
+        <div class="Mid_R">
+
+            <div class="MidR_ad">
+                <!--#include File="/autoinc/abinc/ja/zq_right_300_1.htm"-->
+            </div>
+            <div class="MidRtit"><div class="tit">浏览量排行TOP10</div><div class="more"></div></div>
+            <div class="MidRcon">
+                <ul class="Rtxtpic">
+                    {PE.Label id="内容带图片的信息列表数据源" sourceId="top" bindStyle="新闻式"  titleLength="70" nodes="11001" outputQty="10" specials="{PE.Field id="cone" fieldname="gongluezhuantiid"/}" itemListOrderType="5" linkOpenType="1" models="1" bindModel="1"  displayDateTime="yyyy-mm-dd"  /}
+                    {PE.Repeat id="top" vtl="true"}
+                    <li><div class="num n${Number}">${Number}</div><div class="tit"><a href="${ArticleUrl}" title="${Title}" target="_blank">${Title}</a></div></li>
+                    {/PE.Repeat}
+                </ul>
+            </div><!--MidRcon end-->
+            {PE.Label id="获取推荐TAG(电玩库)" gameLib="{@cone.GameLib}" domain="www" TAGfieldName="SortTag" /}
+            <div class="MidRtit"><div class="tit">热门推荐</div><div class="more"></div></div>
+            <div class="MidRcon">
+                {PE.Field id="cone" fieldname="rementuijian"/}
+                <div class="moretag"><a class="Un" href="javascript:;" onclick="$(this).attr('class',$(this).attr('class')=='Un'?'On':'Un').parent().prev('ul').toggleClass('cur')">展开更多</a></div>
+            </div><!--MidRcon end-->
+
+            <div class="MidRtit"><div class="tit">流程攻略</div><div class="more"><a href="http://www.gamersky.com/z/{PE.Field id="cone" fieldname="ZGameDir"/}/{PE.Field id="cone" fieldname="GameLib"/}_28327/" target="_blank">更多>></a></div></div>
+            <div class="MidRcon">
+                <ul class="wenlist">
+                    {PE.Label id="内容带图片的信息列表TAG数据源" sourceId="licheng" bindStyle="新闻式" titleLength="70" nodes="11001" outputQty="10"  specials="{PE.Field id="cone" fieldname="gongluezhuantiid"/}" Tag="流程攻略" models="1" bindModel="1"  itemListOrderType="3" linkOpenType="1" displayDateTime="yyyy-mm-dd" /}
+                    {PE.Repeat id="licheng" vtl="true"}
+                    <li class="li1"><a href="${ArticleUrl}" title="${Title}" target="_blank">${Title}</a></li>
+                    {/PE.Repeat}
+                </ul>
+            </div><!--MidRcon end-->
+
+            <div class="MidRtit"><div class="tit">问题解决</div><div class="more"><a href="http://www.gamersky.com/z/{PE.Field id="cone" fieldname="ZGameDir"/}/{PE.Field id="cone" fieldname="GameLib"/}_34425/" target="_blank">更多>></a></div></div>
+            <div class="MidRcon">
+                <ul class="wenlist">
+                    {PE.Label id="内容带图片的信息列表数据源" sourceId="wtjj" bindStyle="新闻式"  titleLength="70" nodes="20352,20380,20381" outputQty="10" specials="{PE.Field id="cone" fieldname="gongluezhuantiid"/}" models="1" bindModel="1"  itemListOrderType="3" linkOpenType="1" displayDateTime="yyyy-mm-dd"/}
+                    {PE.Repeat id="wtjj" vtl="true"}
+                    <li class="li1"><a href="${ArticleUrl}" title="${Title}" target="_blank">${Title}</a></li>
+                    {/PE.Repeat}
+                </ul>
+            </div><!--MidRcon end-->
+
+            <div class="MidRtit"><div class="tit">游戏资料</div><div class="more"><a href="http://www.gamersky.com/z/{PE.Field id="cone" fieldname="ZGameDir"/}/{PE.Field id="cone" fieldname="GameLib"/}_32615/" target="_blank">更多>></a></div></div>
+            <div class="MidRcon">
+                <ul class="wenlist">
+                    {PE.Label id="内容带图片的信息列表数据源" sourceId="zl" bindStyle="新闻式"  titleLength="70" nodes="20351,20353,20356" outputQty="10" specials="{PE.Field id="cone" fieldname="gongluezhuantiid"/}" models="1" bindModel="1"   itemListOrderType="3" linkOpenType="1"  displayDateTime="yyyy-mm-dd"/}
+                    {PE.Repeat id="zl" vtl="true"}
+                    <li class="li1"><a href="${ArticleUrl}" title="${Title}" target="_blank">${Title}</a></li>
+                    {/PE.Repeat}
+                </ul>
+            </div><!--MidRcon end-->
+
+            <div class="MidRtit"><div class="tit">攻略秘籍</div><div class="more"><a href="http://www.gamersky.com/z/{PE.Field id="cone" fieldname="ZGameDir"/}/{PE.Field id="cone" fieldname="GameLib"/}_35407/" target="_blank">更多>></a></div></div>
+            <div class="MidRcon">
+                <ul class="wenlist">
+                    {PE.Label id="内容带图片的信息列表数据源" sourceId="miji" bindStyle="新闻式"  titleLength="70" nodes="19,21,338" outputQty="10" specials="{PE.Field id="cone" fieldname="gongluezhuantiid"/}" models="1" bindModel="1"   itemListOrderType="3" linkOpenType="1" displayDateTime="yyyy-mm-dd" /}
+                    {PE.Repeat id="miji" vtl="true"}
+                    <li class="li1"><a href="${ArticleUrl}" title="${Title}" target="_blank">${Title}</a></li>
+                    {/PE.Repeat}
+                </ul>
+            </div><!--MidRcon end-->
+            <div class="MidR_ad">
+                <!--#include File="/autoinc/ja_nest/common/zq_right_300_2.htm"-->
+            </div>
+            <div class="MidRtit"><div class="tit">成就/奖杯</div><div class="more"><a href="http://www.gamersky.com/z/{PE.Field id="cone" fieldname="ZGameDir"/}/{PE.Field id="cone" fieldname="GameLib"/}_34496/" target="_blank">更多>></a></div></div>
+            <div class="MidRcon">
+                <ul class="wenlist">
+                    {PE.Label id="内容带图片的信息列表TAG数据源" sourceId="cjjb" bindStyle="新闻式"  titleLength="70" nodes="20903" outputQty="10" specials="{PE.Field id="cone" fieldname="gongluezhuantiid"/}" models="1" bindModel="1" itemListOrderType="3" linkOpenType="1"  displayDateTime="yyyy-mm-dd" Tag="奖杯成就"/}
+                    {PE.Repeat id="cjjb" vtl="true"}
+                    <li class="li1"><a href="${ArticleUrl}" title="${Title}" target="_blank">${Title}</a></li>
+                    {/PE.Repeat}
+                </ul>
+            </div><!--MidRcon end-->
+
+        </div><!--Mid_R end-->
+    </div><!--Mid end-->
+
+    <div class="Bot">
+        <script src="https://www.gamersky.com/autoinc/allsite/allsite_copyright_1_js.htm"></script>
+    </div><!--Bot end-->
+</div><!--center end-->
+<!--#include File="/autoinc/abinc/zq_list_bottom.htm"-->
+</body>
+</html>
