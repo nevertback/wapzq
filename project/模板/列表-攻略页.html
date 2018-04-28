@@ -49,7 +49,7 @@
         <div class="gsZqGetMoreTar0">
             <div class="gs-zq-list gs-zq-list-txt">
                 <ul>
-                    {PE.Label id="内容带图片的信息列表数据源" sourceId="zqlist2" bindStyle="新闻式" models="1" bindModel="1" titleLength="70" nodes="11001" specials="0" gamelib="{@cone.GameLib}" outputQty="8" itemListOrderType="3" displayDateTime="yyyy-mm-dd" imageWidth="250" imageHeight="140" /}
+                    {PE.Label id="内容带图片的信息列表数据源" sourceId="zqlist2" bindStyle="新闻式" models="1" bindModel="1" titleLength="70" nodes="11001" specials="{PE.Field id="cone" fieldname="gongluezhuantiid"/}" gamelib="{@cone.GameLib}" outputQty="8" itemListOrderType="3" displayDateTime="yyyy-mm-dd" imageWidth="250" imageHeight="140" /}
                     {PE.Repeat id="zqlist2" vtl="true"}
                     #if(${Number}>3)
                     <li data-id="${ArticleID}">
@@ -60,10 +60,10 @@
                 </ul>
             </div>
         </div>
-        {PE.Label id="内容带图片的信息列表数据源" sourceId="zqlist3" bindStyle="新闻式" models="1" bindModel="1" titleLength="70" nodes="11001" specials="0" gamelib="{@cone.GameLib}" outputQty="9" itemListOrderType="3" displayDateTime="yyyy-mm-dd" imageWidth="250" imageHeight="140" /}
+        {PE.Label id="内容带图片的信息列表数据源" sourceId="zqlist3" bindStyle="新闻式" models="1" bindModel="1" titleLength="70" nodes="11001" specials="{PE.Field id="cone" fieldname="gongluezhuantiid"/}" gamelib="{@cone.GameLib}" outputQty="9" itemListOrderType="3" displayDateTime="yyyy-mm-dd" imageWidth="250" imageHeight="140" /}
         {PE.Repeat id="zqlist3" vtl="true"}
         #if(${Number} == 9)
-        <a class="gs-zq-more gs-zq-more-blue gzls-rmd-more gsZqGetMore" data-tar="gsZqGetMoreTar0" data-tmk="testwapzqmore" data-nid="796" data-page="1">更多</a>
+        <a class="gs-zq-more gs-zq-more-blue gzls-rmd-more gsZqGetMore" data-tar="gsZqGetMoreTar0" data-tmk="wap_z_list_handbook" data-nid="@RequestInt_id" data-page="1">更多</a>
         #end
         {/PE.Repeat}
     </div>
@@ -71,12 +71,8 @@
     <div class="gs-zq-gl gsZqNavPos2" id="gsZqStrategy">
         <div class="gs-zq-title-lev1">攻略合集</div>
         <div class="gs-zq-gl-box">
-            <div class="gsZqGlQuick">
-                <div style="display:none" class="collectbox">
-                    <!-- 此处输出攻略集 -->
-                    {@cone.GlInc}
-                </div>
-            </div>
+            <div class="gsZqGlQuick"></div>
+            {PE.Label id="获取游戏库信息列表"  gamelib="{PE.Field id="cone" fieldname="GameLib" /}" type="34"/}
         </div>
 </div>
 <span id="wapcountn" generalId="@RequestInt_id" style="display:none;"></span>

@@ -249,39 +249,21 @@
             this.each(function () {
                 var $ts = $(this),
                     moreUrl = $ts.data('href'),
-                    $tar = $('.'+$ts.data('tar')),tmk,nid,lid;
-                tmk = $ts.data('tmk');
-                nid = $ts.data('nid');
-                lid = $tar.find('li').eq(-1).data('id');
+                    $tar = $('.'+$ts.data('tar'));
                 function addData(){
-                    var transData,tmpJson;
-                    tmpJson={
-                        type:"getwaplabelpage",
-                        isCache:true,
-                        cacheTime:dataCacheTime,
-                        templatekey:tmk,
-                        id:lid,
-                        nodeId:nid,
-                        page:2
-                    };
-                    transData = {
-                        jsondata:JSON.stringify(tmpJson)
-                    };
-                    zqApi.getMoreList(transData,function (moreDt) {
-                        if(moreDt.status === 'ok'){
-                            $tar.find('ul').append(moreDt.body);
-                        }
+                    $ts.hide();
+                    $tar.gsZqAddLoading();
+                    setTimeout(function () {
+                        $tar.find('ul li').show();
                         $tar.gsZqRemoveLoading();
                         $ts.show().addClass('gs-zq-more-all').html('查看全部').attr({
                             'href':moreUrl,
                             'target':'_blank'
-                        }).off();
-                    },function () {
-                        $ts.hide();
-                        $tar.gsZqAddLoading();
-                    })
+                        });
+                    },500);
                 }
                 $ts.on('tap',function () {
+                    $ts.off();
                     addData();
                 })
             });
@@ -293,16 +275,14 @@
                 tmk = $ts.data('tmk');
                 nid = $ts.data('nid');
                 function addData(){
-                    var transData,tmpJson,lpg = $ts.attr('data-page'),lid;
-                    lid = $tar.find('li').eq(-1).data('id');
+                    var transData,tmpJson,lpg = $ts.attr('data-page');
                     lpg++;
                     tmpJson={
-                        type:"getwaplabelpage",
+                        type:"templatekeylabel",
                         isCache:true,
                         cacheTime:dataCacheTime,
                         templatekey:tmk,
-                        id:lid,
-                        nodeId:nid,
+                        id:nid,
                         page:lpg
                     };
                     transData = {
@@ -591,10 +571,14 @@
             });
         },
         openClub:function(){
-            var _this = this;
-            this.DomExist($('#QZCMT'),function () {
-                $.getScript('//j.gamersky.com/web2015/qzcomment/js/qzcmtconfig.wap.js');
-            });
+            var _this = this,$club = $('#QZCMT');
+            if($.trim($club.attr('clubId'))!=='' && $.trim($club.attr('topicId'))!=='') {
+                _this.DomExist($club,function () {
+                    $.getScript('//j.gamersky.com/web2015/qzcomment/js/qzcmtconfig.wap.js');
+                });
+            }else{
+                $('.gs-zq-club').hide();
+            }
         },
         init:function () {
             var _this = this;

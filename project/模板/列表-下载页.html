@@ -32,7 +32,7 @@
     <div class="gsZqGetMoreTar0">
         <div class="gs-zq-list gs-zq-list-txt">
             <ul>
-                {PE.Label id="内容带图片的信息列表数据源" sourceId="zqlist" bindStyle="新闻式" models="1" bindModel="1" titleLength="70" nodes="10002" specials="0" gamelib="{@cone.GameLib}" outputQty="10" itemListOrderType="3" /}
+                {PE.Label id="内容带图片的信息列表数据源" sourceId="zqlist" bindStyle="下载式" models="2" bindModel="2" titleLength="70" nodes="10002" specials="{PE.Field id="cone" fieldname="xiazaizhuantiid"/}" gamelib="{@cone.GameLib}" outputQty="10" itemListOrderType="3" /}
                 {PE.Repeat id="zqlist" vtl="true"}
                 <li data-id="${ArticleID}">
                     <a target="_blank" href="${WapArticleUrl}">${Title}</a>
@@ -41,10 +41,10 @@
             </ul>
         </div>
     </div>
-    {PE.Label id="内容带图片的信息列表数据源" sourceId="zqlistmore" bindStyle="新闻式" models="1" bindModel="1" titleLength="70" nodes="10002" specials="0" gamelib="{@cone.GameLib}" outputQty="11" itemListOrderType="3" /}
+    {PE.Label id="内容带图片的信息列表数据源" sourceId="zqlistmore" bindStyle="下载式" models="2" bindModel="2" titleLength="70" nodes="10002" specials="{PE.Field id="cone" fieldname="xiazaizhuantiid"/}" gamelib="{@cone.GameLib}" outputQty="11" itemListOrderType="3" /}
     {PE.Repeat id="zqlistmore" vtl="true"}
     #if(${Number} == 11)
-    <a class="gs-zq-more gs-zq-more-blue gzls-rmd-more gsZqGetMore" data-tar="gsZqGetMoreTar0" data-tmk="testwapzqmorepic" data-nid="796" data-page="1">更多</a>
+    <a class="gs-zq-more gs-zq-more-blue gzls-rmd-more gsZqGetMore" data-tar="gsZqGetMoreTar0" data-tmk="wap_z_list_download" data-nid="@RequestInt_id" data-page="1">更多</a>
     #end
     {/PE.Repeat}
 </div>
