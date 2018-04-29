@@ -2,21 +2,14 @@
 <!DOCTYPE html>
 <html lang="en" class="gs-zq-html">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
+    <!--#include File="/autoinc/abinc/wap_mate.htm"-->
     <title>{@cone.title2}|游民星空</title>
     <meta name="keywords" content="{@cone.keywords}">
     <meta name="description" content="{@cone.description}">
-    <!--#include File="/autoinc/abinc/new_wap_header_ku.htm"-->
-    <link rel="stylesheet" href="http://j.gamersky.com/wap/zq/css/wap.zq.min.css">
+    <!--#include File="/autoinc/abinc/wap_zq_head.htm"-->
 </head>
 <body>
-<!--#include File="/autoinc/abinc/wap_wrap_top.htm"-->
-<!--#include File="/autoinc/abinc/new_wap_nav.htm"-->
+<!--#include File="/autoinc/abinc/wap_zq_top.htm"-->
 <div class="gs-zq-nav-placeholder gsZqNavPlaceholder">
     <div class="gs-zq-nav gsZqNav">
         <div class="gs-zq-nav-box">
@@ -38,16 +31,9 @@
         </div>
         <div class="info gsZqGameInfo">
             <p>类型：{@cone.leixing}  {PE.Label id="获取游戏库信息列表"  gamelib="{PE.Field id="cone" fieldname="GameLib" /}" type="33"/}</p>
-            <p class="gsZqGameInfoPlat">平台：
-                <a class="cur">PC</a>
-                <a>XboxOne</a>
-                <a>PS4</a>
-            </p>
-            <!--todo pingtai时间-->
-            <div class="time gsZqGameInfoTime">
-                <p class="cur">上市：2016.06.07(PC) </p>
-                <p>上市：2016.06.07(XboxOne) </p>
-                <p>上市：2016.06.07(PS4) </p>
+            <div class="gsZqGameInfoPlatBox">
+                <p class="gsZqGameInfoPlat">平台：<a class="cur">loading...</a></p>
+                <div class="time gsZqGameInfoTime"><p class="cur">上市：loading...</p></div>
             </div>
             <p>制作发行：{PE.Label id="获取游戏库信息列表"  gamelib="{PE.Field id="cone" fieldname="GameLib" /}" type="15"/}</p>
         </div>
@@ -56,6 +42,9 @@
             <span class="gs-zp-rating-tit">游民评分</span>
             <span class="gs-zp-rating-arr"></span>
         </a>
+    </div>
+    <div class="introduce gsZqGameInfoIntroHolder">
+        <p>loading...</p>
     </div>
     <div class="introduce gsZqGameInfoIntro" style="display: none;">
         {@cone.youxixinxi3}
@@ -279,9 +268,6 @@
 <span id="wapcountn" generalId="@RequestInt_id" style="display:none;"></span>
 <!--#include File="/autoinc/abinc/new_wap_footer_t.htm"-->
 <a href="http://www.gamersky.com/z/{@cone.ZGameDir}/?tag=wap" class="ymw-btns ymw-btns-pc">
-    <!--#include File="/autoinc/abinc/new_wap_footer_b_ku.htm"-->
-    <!--todo 专区INC-->
-    <script src="http://j.gamersky.com/wap/zq/js/wap.zq.js"></script>
-    <!--#include File="/autoinc/abinc/wap_wrap_bot.htm"-->
+<!--#include File="/autoinc/abinc/wap_zq_foot.htm"-->
 </body>
 </html>

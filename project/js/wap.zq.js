@@ -99,14 +99,47 @@
         },
         gsZqInfoPlatformTime:function () {
             this.each(function () {
-                var $ts = $(this),
-                    $btn = $ts.find('.gsZqGameInfoPlat'),
-                    $item = $ts.find('.gsZqGameInfoTime');
-                $btn.find('a').on('tap',function () {
-                    var idx = $(this).index();
-                    $btn.find('a').removeClass('cur').eq(idx).addClass('cur');
-                    $item.find('p').removeClass('cur').eq(idx).addClass('cur');
-                })
+                var $ts = $(this);
+                function createDom(dt) {
+                    var $box = $ts.find('.gsZqGameInfoPlatBox'),
+                        vDom='',vDomNav='',vDomCon='';
+                    vDomNav += '<p class="gsZqGameInfoPlat">平台：';
+                    vDomCon += '<div class="time gsZqGameInfoTime">';
+                    $.each(dt,function (i,item) {
+                        var sty = '';
+                        sty = i===0?'cur':'';
+                        vDomNav += '<a class="'+sty+'">'+item.pt+'</a>';
+                        vDomCon += '<p class="'+sty+'">上市：'+item.time+'('+item.pt+') </p>';
+                    });
+                    vDomNav += '</p>';
+                    vDomCon += '</div>';
+                    vDom += vDomNav;
+                    vDom += vDomCon;
+                    $box.html(vDom);
+                }
+                function operationDom() {
+                    var $btn = $ts.find('.gsZqGameInfoPlat'),
+                        $item = $ts.find('.gsZqGameInfoTime');
+                    $btn.find('a').on('tap',function () {
+                        var idx = $(this).index();
+                        $btn.find('a').removeClass('cur').eq(idx).addClass('cur');
+                        $item.find('p').removeClass('cur').eq(idx).addClass('cur');
+                    });
+                }
+                function formatData(){
+                    var ptTimeData = [];
+                    $('#dataTimeArea').find('li').each(function () {
+                        var $ts = $(this).find('a'),tmpArr;
+                        tmpArr = {
+                            pt:$ts.text(),
+                            time:$ts.data('time')
+                        };
+                        ptTimeData.push(tmpArr);
+                    });
+                    createDom(ptTimeData);
+                    operationDom();
+                }
+                formatData();
             });
         },
         gsZqInfoIntro:function () {
@@ -121,6 +154,7 @@
                     }
                 }).remove();
                 para += '</p>';
+                $('.gsZqGameInfoIntroHolder').hide();
                 $ts.append(para).show();
                 $btn.on('tap',function () {
                     $ts.addClass('cur');
