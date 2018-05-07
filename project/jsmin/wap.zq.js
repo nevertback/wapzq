@@ -380,13 +380,13 @@
                         if(calcScore === '100'){
                             numDom += '<i class="pnm pnm1"></i>';
                             numDom += '<i class="pnm pnm0"></i>';
-                            _this.find('.gsZqRatingNum').addClass('gs-zp-rating-num-full');
+                            _this.show().find('.gsZqRatingNum').addClass('gs-zp-rating-num-full');
                         }else{
                             numDom += '<i class="pnm pnm'+calcScore[0]+'"></i>';
                             numDom += '<i class="dot"></i>';
                             numDom += '<i class="pnm pnm'+calcScore[1]+'"></i>';
                         }
-                        _this.find('.gsZqRatingNum').html(numDom);
+                        _this.show().find('.gsZqRatingNum').html(numDom);
                     }else{
                         _this.remove();
                     }
@@ -606,12 +606,19 @@
         },
         openClub:function(){
             var _this = this,$club = $('#QZCMT');
-            if($.trim($club.attr('clubId'))!=='' && $.trim($club.attr('topicId'))!=='') {
+            if($.trim($club.attr('clubId'))!=='' || $.trim($club.attr('topicId'))!=='') {
                 _this.DomExist($club,function () {
                     $.getScript('//j.gamersky.com/web2015/qzcomment/js/qzcmtconfig.wap.js');
                 });
             }else{
                 $('.gs-zq-club').hide();
+            }
+        },
+        pzShowHide:function(){
+            if($('#pzMain').length>0){
+                if($('.pz_data').find('.PZXQ').length<1){
+                    $('.gs-zq-config').hide();
+                }
             }
         },
         init:function () {
@@ -629,6 +636,7 @@
             _this.getRating();
             _this.createPic();
             _this.openClub();
+            _this.pzShowHide();
         }
     };
     cps.init();
