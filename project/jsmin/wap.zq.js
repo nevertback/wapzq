@@ -109,7 +109,7 @@
                         var sty = '';
                         sty = i===0?'cur':'';
                         vDomNav += '<a class="'+sty+'">'+item.pt+'</a>';
-                        vDomCon += '<p class="'+sty+'">上市：'+item.time+'('+item.pt+') </p>';
+                        vDomCon += '<p class="'+sty+'">上市：'+item.showtime+'('+item.pt+') </p>';
                     });
                     vDomNav += '</p>';
                     vDomCon += '</div>';
@@ -132,7 +132,8 @@
                         var $ts = $(this).find('a'),tmpArr;
                         tmpArr = {
                             pt:$ts.text(),
-                            time:$ts.data('time')
+                            time:$ts.data('time'),
+                            showtime:$ts.data('showtime')
                         };
                         ptTimeData.push(tmpArr);
                     });
@@ -150,10 +151,11 @@
                 $ts.find('p').each(function (i) {
                     para += $(this).text().replace('　　','');
                     if(i===0){
-                        para += ':';
+                        para += '：';
                     }
                 }).remove();
                 para += '</p>';
+				para = para.replace(/：：/g,'：');
                 $('.gsZqGameInfoIntroHolder').hide();
                 $ts.append(para).show();
                 $btn.on('tap',function () {
@@ -376,7 +378,7 @@
                         calcScore,
                         numDom = '';
                     calcScore = parseFloat(tmpScore)*10+'';
-                    if(tmpScore !== '--'){
+                    if(tmpScore !== '--' && $('#dataTimeArea').attr('date-selltime') === '已上市'){
                         if(calcScore === '100'){
                             numDom += '<i class="pnm pnm1"></i>';
                             numDom += '<i class="pnm pnm0"></i>';
@@ -609,9 +611,17 @@
             if($.trim($club.attr('clubId'))!=='' || $.trim($club.attr('topicId'))!=='') {
                 _this.DomExist($club,function () {
                     $.getScript('//j.gamersky.com/web2015/qzcomment/js/qzcmtconfig.wap.js');
+                    $('.gs-zq-club').addClass('gsZqNavPos4');
+                    $('.gs-zq-ku-comm').remove();
                 });
             }else{
                 $('.gs-zq-club').hide();
+                $('.gs-zq-ku-comm').on('click','.btnDetailMore',function (ev) {
+                    console.log('gs-zq-ku-comm');
+                    $(this).off();
+                    ev.preventDefault();
+                    window.location.href = $('.gs-zq-ku-comm .gs-more').attr('href');
+                });
             }
         },
         pzShowHide:function(){

@@ -378,7 +378,7 @@
                         calcScore,
                         numDom = '';
                     calcScore = parseFloat(tmpScore)*10+'';
-                    if(tmpScore !== '--' && $('#dataTimeArea').attr('date-selltime') === '已上市'){
+                    if(tmpScore !== '--'){
                         if(calcScore === '100'){
                             numDom += '<i class="pnm pnm1"></i>';
                             numDom += '<i class="pnm pnm0"></i>';
