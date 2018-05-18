@@ -67,82 +67,70 @@
     </div>
     <div class="gs-zq-hng-box gztBox">
         <div class="gs-zq-hng-item gztItem cur">
-            <div class="gs-zq-swp gsZqSwpDad">
-                <div class="swiper-container gsZqSwp">
-                    <div class="swiper-wrapper">
-                        {PE.Label id="专区推荐列表数据源" sourceId="batu1" bindStyle="新闻式" outputQty="8" titleLength="40" nodes="0" bindModel="0" joinFieldMultipleValued="true" fieldName="ZFocus" fieldValue="专区八图" specials="{PE.Field id="cone" fieldname="xinwenzhuantiid"/},{PE.Field id="cone" fieldname="gongluezhuantiid"/}" itemListOrderType="3"  linkOpenType="2" imageWidth="320" imageHeight="180"  imageClass="pic1" picExist="true" /}
-                        {PE.Repeat id="batu1"}
-                        <div class="swiper-slide">
-                            <a target="_blank" href="{$ArticleUrl}">
-                                {$ArticlePic}
-                                <span>{$Title}</span>
-                            </a>
-                        </div>
-                        {/PE.Repeat}
-                    </div>
-                </div>
-            </div>
             <div class="gsZqGetMoreTar0">
                 <div class="gs-zq-list gs-zq-list-txt">
                     <ul>
-                        {PE.Label id="专区推荐列表数据源" sourceId="listHot" bindStyle="新闻式"  joinFieldMultipleValued="true" fieldName="ZFocus" fieldValue="专区综合"  specials="{PE.Field id="cone" fieldname="xinwenzhuantiid"/},{PE.Field id="cone" fieldname="gongluezhuantiid"/}" bindModel="0" nodes="0" outputQty="10" titleLength="45" itemListOrderType="3" linkOpenType="2" picExist="false" /}
-                        {PE.Repeat id="listHot" vtl="true"}
-                        #if(${Number} == 6||${Number} == 7||${Number} == 8||${Number} == 9||${Number} == 10)
-                        <li data-id="${ArticleID}" style="display: none;">
-                            #else
+                        <div class="gsZqListCount">
+                            {PE.Label id="内容带图片的信息列表数据源" sourceId="listHot" bindStyle="新闻式" specials="0" models="1" bindModel="1" nodes="11007,11001" gamelib="{@cone.GameLib}" outputQty="36" titleLength="45" itemListOrderType="3" /}
+                            {PE.Repeat id="listHot" vtl="true"}
+                            #if(${Number} == 9||${Number} == 18||${Number} == 27)
+                        </div><div class="gsZqListCount" style="display: none;">
+                        #end
                         <li data-id="${ArticleID}">
-                            #end
                             <a target="_blank" href="${ArticleUrl}">
                                 <b>[${ClassAbbrName}]</b>${Title}
                             </a>
                         </li>
                         {/PE.Repeat}
+                    </div>
                     </ul>
                 </div>
             </div>
-            <a class="gs-zq-more gsZqGetMoreOnce" data-tar="gsZqGetMoreTar0" data-href="news/">更多</a>
+            <a class="gs-zq-more gsZqGetMoreOnceTag" data-tar="gsZqGetMoreTar0">更多</a>
         </div>
         <div class="gs-zq-hng-item gztItem">
             <div class="gsZqGetMoreTar1">
                 <div class="gs-zq-list gs-zq-list-txt">
                     <ul>
-                        {PE.Label id="内容带图片的信息列表数据源" sourceId="listNews" bindStyle="新闻式" specials="0" models="1" bindModel="1" nodes="11007" gamelib="{@cone.GameLib}" outputQty="14" titleLength="45" itemListOrderType="3" /}
-                        {PE.Repeat id="listNews" vtl="true"}
-                        #if(${Number} == 10||${Number} == 11||${Number} == 12||${Number} ==13||${Number} == 14)
-                        <li data-id="${ArticleID}" style="display: none;">
-                            #else
+                        <div class="gsZqListCount">
+                            {PE.Label id="内容带图片的信息列表数据源" sourceId="listNews" bindStyle="新闻式" specials="0" models="1" bindModel="1" nodes="11007" gamelib="{@cone.GameLib}" outputQty="36" titleLength="45" itemListOrderType="3" /}
+                            {PE.Repeat id="listNews" vtl="true"}
+                            #if(${Number} == 9||${Number} == 18||${Number} == 27)
+                        </div><div class="gsZqListCount" style="display: none;">
+                        #end
                         <li data-id="${ArticleID}">
-                            #end
-                            <a target="_blank" href="${WapArticleUrl}">
+                            <a target="_blank" href="${ArticleUrl}">
                                 <b>[${ClassAbbrName}]</b>${Title}
                             </a>
                         </li>
                         {/PE.Repeat}
+                    </div>
                     </ul>
                 </div>
             </div>
-            <a class="gs-zq-more gsZqGetMoreOnce" data-tar="gsZqGetMoreTar1" data-href="news/">更多</a>
+            <a class="gs-zq-more gsZqGetMoreOnceTag" data-tar="gsZqGetMoreTar1">更多</a>
         </div>
         <div class="gs-zq-hng-item gztItem">
             <div class="gsZqGetMoreTar2">
                 <div class="gs-zq-list gs-zq-list-txt">
                     <ul>
-                        {PE.Label id="内容带图片的信息列表数据源" sourceId="listGl" bindStyle="新闻式" specials="0" models="1" bindModel="1" nodes="11001" gamelib="{@cone.GameLib}" outputQty="14" titleLength="45" itemListOrderType="3" /}
-                        {PE.Repeat id="listGl" vtl="true"}
-                        #if(${Number} == 10||${Number} == 11||${Number} == 12||${Number} ==13||${Number} == 14)
-                        <li data-id="${ArticleID}" style="display: none;">
-                            #else
+                        <div class="gsZqListCount">
+                            {PE.Label id="内容带图片的信息列表数据源" sourceId="listGl" bindStyle="新闻式" specials="0" models="1" bindModel="1" nodes="11001" gamelib="{@cone.GameLib}" outputQty="36" titleLength="45" itemListOrderType="3" /}
+                            {PE.Repeat id="listGl" vtl="true"}
+                            #if(${Number} == 9||${Number} == 18||${Number} == 27)
+                        </div><div class="gsZqListCount" style="display: none;">
+                        #end
                         <li data-id="${ArticleID}">
-                            #end
-                            <a target="_blank" href="${WapArticleUrl}">
+                            <a target="_blank" href="${ArticleUrl}">
                                 <b>[${ClassAbbrName}]</b>${Title}
                             </a>
                         </li>
                         {/PE.Repeat}
+                    </div>
                     </ul>
                 </div>
             </div>
-            <a class="gs-zq-more gsZqGetMoreOnce" data-tar="gsZqGetMoreTar2" data-href="handbook/">更多</a>
+            <a class="gs-zq-more gsZqGetMoreOnceTag" data-tar="gsZqGetMoreTar2">更多</a>
         </div>
     </div>
 </div>
@@ -170,7 +158,7 @@
         </ul>
     </div>
 </div>
-<div class="gs-zq-video gsZqNavPos3 gsZqVideo">
+<div class="gs-zq-video gsZqVideo gsZqNavPos3">
     <div class="gs-zq-title-lev1">视频</div>
     <div class="gs-zq-swp gs-zq-swp-video gsZqSwpDad">
         <div class="swiper-container gsZqSwp">
@@ -193,7 +181,7 @@
     {PE.Label id="获取游戏库信息列表" gamelib="{PE.Field id="cone" fieldname="GameLib" /}" type="37"/}
 </div>
 <div class="gs-zq-download gsZqDownload">
-    <div class="gs-zq-title-lev1">下载<a target="_blank" href="down/" class="gs-more">更多</a></div>
+    <div class="gs-zq-title-lev1">下载</div>
     <div class="gs-zq-list gs-zq-list-download">
         <ul>
             {PE.Label id="内容带图片的信息列表数据源" sourceId="zqDownload" bindStyle="下载式" specials="0" models="2" bindModel="2" nodes="10002" gamelib="{@cone.GameLib}" outputQty="2" titleLength="45" itemListOrderType="3" /}

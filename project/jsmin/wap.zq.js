@@ -281,6 +281,46 @@
         gsZqRemoveLoading:function(){
             $('.gsZqLoading').remove();
         },
+        gsZqGetMoreOnceTag:function(){
+            this.each(function () {
+                var $ts = $(this),
+                    $tar = $('.'+$ts.data('tar')),
+                    clkAble = true,
+                    dataCount = $tar.find('.gsZqListCount').length;
+                $ts.attr({'data-page':0,'data-total':dataCount});
+                if(dataCount < 2){
+                    $ts.addClass('gs-zq-more-done').html('全部加载完成');
+                    clkAble = false;
+                }
+                function addData(idx,sum){
+                    $ts.hide();
+                    $tar.gsZqAddLoading();
+                    setTimeout(function () {
+                        $tar.find('.gsZqListCount').eq(idx).show();
+                        $tar.gsZqRemoveLoading();
+                        $ts.show();
+                        if(idx >= sum - 1){
+                            $ts.addClass('gs-zq-more-done').html('全部加载完成');
+                        }else{
+                            clkAble = true;
+                        }
+                    },500);
+                }
+                $ts.on('tap',function () {
+                    var $t = $(this),
+                        nowPage = $t.attr('data-page'),
+                        nowTotal = $t.attr('data-total');
+                    if(clkAble === true){
+                        clkAble = false;
+                        if(nowPage<nowTotal){
+                            nowPage++;
+                            $t.attr('data-page',nowPage);
+                            addData(nowPage,nowTotal);
+                        }
+                    }
+                });
+            });
+        },
         gsZqGetMoreOnce:function () {
             this.each(function () {
                 var $ts = $(this),
@@ -479,6 +519,9 @@
             this.DomExist($('.gsZqGetMoreOnce'),function () {
                 $('.gsZqGetMoreOnce').gsZqGetMoreOnce();
             });
+            this.DomExist($('.gsZqGetMoreOnceTag'),function () {
+                $('.gsZqGetMoreOnceTag').gsZqGetMoreOnceTag();
+            });
         },
         more:function(){
             this.DomExist($('.gsZqGetMore'),function () {
@@ -617,7 +660,6 @@
             }else{
                 $('.gs-zq-club').hide();
                 $('.gs-zq-ku-comm').on('click','.btnDetailMore',function (ev) {
-                    console.log('gs-zq-ku-comm');
                     $(this).off();
                     ev.preventDefault();
                     window.location.href = $('.gs-zq-ku-comm .gs-more').attr('href');
@@ -629,6 +671,27 @@
                 if($('.pz_data').find('.PZXQ').length<1){
                     $('.gs-zq-config').hide();
                 }
+            }
+        },
+        sectionShowHide:function(){
+            function hideSection(tar,callback) {
+                if(tar.text().indexOf('没有任何记录')>0){
+                    tar.hide().remove();
+                    if(typeof callback === "function"){
+                        callback();
+                    }
+                }
+            }
+            if($('.gsZqIndex').length>0){
+                hideSection($('.gsZqArticlePc'));
+                hideSection($('.gsZqDownload'));
+                hideSection($('.gsZqVideo'),function () {
+                    if($('#gsZpImages').find('.gs-zq-images').length>0){
+                        $('#gsZpImages').addClass('gsZqNavPos3');
+                    }else{
+                        $('.gsZqNavVP').remove();
+                    }
+                });
             }
         },
         init:function () {
@@ -647,6 +710,7 @@
             _this.createPic();
             _this.openClub();
             _this.pzShowHide();
+            _this.sectionShowHide();
         }
     };
     cps.init();
